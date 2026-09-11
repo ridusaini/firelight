@@ -1,0 +1,17 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import CommunityDirectory from '../components/CommunityDirectory.astro';
+import { getCommunity, submissionUrl } from '../lib/community';
+const samples = import.meta.env.DEV && import.meta.env.MODE === 'samples';
+const data = getCommunity(samples, import.meta.env.DEV);
+---
+<SiteLayout title="Community | firelight" description="App themes and projects made with firelight, maintained by their creators." current="community">
+  <header class="wrap page-heading">
+    <div class="community-heading-row"><h1>Community</h1><a class="community-share" href={submissionUrl}>Share a project</a></div>
+    <p>App themes and projects made with firelight.</p>
+  </header>
+  <div class="community-main">
+    {samples && <p class="wrap sample-preview-note" role="note">Sample preview. Entries loaded from community.samples.json.</p>}
+    <CommunityDirectory data={data} />
+  </div>
+</SiteLayout>

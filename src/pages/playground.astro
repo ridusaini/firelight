@@ -1,0 +1,11 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Icons from '../components/Icons.astro';
+import Playground from '../components/playground/Playground.astro';
+---
+<SiteLayout title="Playground | firelight" description="Explore firelight in interfaces, code, and terminals, and compare its three variants." current="playground">
+  <Icons />
+  <header class="wrap page-heading"><h1>Playground</h1><p>Explore the colours in interfaces, code, and terminals.</p></header>
+  <Playground />
+</SiteLayout>
+<script>import '../scripts/playground';</script>

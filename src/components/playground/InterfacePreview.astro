@@ -1,0 +1,45 @@
+---
+import { sitePath } from '../../lib/paths';
+---
+<article class="ui-card" aria-label="Interface preview">
+        <div class="interface-canvas">
+          <div class="interface-heading">
+            <div>
+              <h3>Interface</h3>
+              <p>Surfaces, text, and everyday controls.</p>
+            </div>
+          </div>
+
+          <div class="interface-samples">
+            <a class="sample-card" href={sitePath("#usage")}>
+              <div class="sample-card-head">
+                <h4>Hoverable card</h4>
+                <code>bg2 / 72%</code>
+              </div>
+              <p>A few notes from today's project.</p>
+              <span class="card-meta">Updated today</span>
+            </a>
+
+            <section class="raised-panel" aria-labelledby="raised-title">
+              <div class="raised-panel-head">
+                <h4 id="raised-title">Raised surface</h4>
+                <code>bg2</code>
+              </div>
+              <div class="inset-panel"><span>Inset surface</span><code>bg0</code></div>
+            </section>
+
+            <div class="interface-controls">
+              <button class="demo-button" type="button">
+                <span>Neutral control</span><code>bg2 / 40%</code>
+              </button>
+              <div class="status-row" aria-label="Status colours">
+                <span class="status-success">Success</span>
+                <span class="status-warning">Warning</span>
+                <span class="status-error">Error</span>
+                <span class="status-info">Info</span>
+              </div>
+              <span class="demo-link">Example link</span>
+            </div>
+          </div>
+        </div>
+      </article>

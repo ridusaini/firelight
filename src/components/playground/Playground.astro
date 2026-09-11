@@ -1,0 +1,52 @@
+---
+import { defaultVariant, variants, variantNames } from '../../lib/palette';
+import InterfacePreview from './InterfacePreview.astro';
+import IdePreview from './IdePreview.astro';
+import TerminalPreview from './TerminalPreview.astro';
+import DiffPreview from './DiffPreview.astro';
+import Comparison from './Comparison.astro';
+---
+<section class="playground" id="playground" data-fl={defaultVariant} aria-labelledby="playground-title">
+  <div class="section-panel">
+    <div class="play-head">
+      <h2 id="playground-title" class="sr-only">Preview</h2>
+      <div class="play-controls">
+        <div class="control-group">
+          <span>Variant</span>
+          <div class="variant-switch" role="group" aria-label="Preview variant">
+            {variants.map(variant => <button type="button" data-demo-variant={variant} aria-pressed={variant === defaultVariant}>{variantNames[variant]}</button>)}
+          </div>
+        </div>
+        <div class="control-group accent-control">
+          <span>Accent: <output id="accent-name">Rose</output></span>
+          <div class="accent-switch" role="group" aria-label="Interface accent">
+            <button type="button" data-demo-accent="rose" aria-label="Rose" title="Rose" aria-pressed="true"></button>
+            <button type="button" data-demo-accent="ember" aria-label="Ember" title="Ember" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="coral" aria-label="Coral" title="Coral" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="apricot" aria-label="Apricot" title="Apricot" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="honey" aria-label="Honey" title="Honey" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="fern" aria-label="Fern" title="Fern" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="verdigris" aria-label="Verdigris" title="Verdigris" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="cornflower" aria-label="Cornflower" title="Cornflower" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="lilac" aria-label="Lilac" title="Lilac" aria-pressed="false"></button>
+            <button type="button" data-demo-accent="orchid" aria-label="Orchid" title="Orchid" aria-pressed="false"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="play-grid">
+      <InterfacePreview />
+
+      <div class="utility-demos">
+        <IdePreview />
+
+        <TerminalPreview />
+
+        <DiffPreview />
+      </div>
+    </div>
+
+<Comparison />
+  </div>
+</section>

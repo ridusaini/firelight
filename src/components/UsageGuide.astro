@@ -1,0 +1,94 @@
+---
+import palette, { defaultVariant } from '../lib/palette';
+import { suggestedUses } from '../lib/usage';
+import { copyInk, cssVariable } from '../lib/colour';
+---
+<section class="usage" id="usage">
+  <div class="section-panel">
+    <h2>Suggested uses</h2>
+    <p class="vd">Some examples for interfaces, code, and terminals.</p>
+    <table class="rt">
+      <thead><tr><th></th><th>Token</th><th>Interface examples</th><th>Code and other examples</th></tr></thead>
+      <tbody>{suggestedUses.map(({token, use, example}) => {
+      const hex = palette.variants[defaultVariant].colors[token];
+      const variable = cssVariable(defaultVariant, token);
+      return <tr><td class="rsw"><span style={'background:' + hex}></span></td><td class="rn"><button type="button" data-v={variable} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variable}><span>{variable}</span><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td><td class="ru">{use}</td><td class="ru">{example}</td></tr>;
+    })}</tbody>
+    </table>
+
+    <div class="spec-group">
+      <div class="spec-head">
+        <h3>More examples</h3>
+        <p>A few ideas for code, messages, diffs, and terminals.</p>
+      </div>
+      <div class="spec-grid">
+        <article class="spec-card">
+          <h4>Syntax</h4>
+          <dl>
+            <div><dt>Comments, punctuation</dt><dd><code>bg5</code></dd></div>
+            <div><dt>Text, variables</dt><dd><code>fg1</code></dd></div>
+            <div><dt>Keywords, control</dt><dd><code>orchid</code></dd></div>
+            <div><dt>Functions, properties</dt><dd><code>cornflower</code></dd></div>
+            <div><dt>Strings</dt><dd><code>fern</code></dd></div>
+            <div><dt>Numbers, constants</dt><dd><code>apricot</code></dd></div>
+            <div><dt>Types, classes, attributes</dt><dd><code>honey</code></dd></div>
+            <div><dt>Operators</dt><dd><code>verdigris</code></dd></div>
+            <div><dt>Parameters, tags, deprecated</dt><dd><code>coral</code></dd></div>
+            <div><dt>Regex, escapes</dt><dd><code>rose</code></dd></div>
+          </dl>
+        </article>
+        <article class="spec-card">
+          <h4>Diagnostics &amp; diffs</h4>
+          <dl>
+            <div><dt>Error</dt><dd><code>ember</code></dd></div>
+            <div><dt>Warning</dt><dd><code>honey</code></dd></div>
+            <div><dt>Info, hint</dt><dd><code>verdigris</code></dd></div>
+            <div><dt>Success</dt><dd><code>fern</code></dd></div>
+            <div><dt>Added</dt><dd><code>fern</code> on <code>diff-add</code></dd></div>
+            <div><dt>Removed</dt><dd><code>ember</code> on <code>diff-remove</code></dd></div>
+            <div><dt>Modified</dt><dd><code>orchid</code> on <code>diff-modify</code></dd></div>
+          </dl>
+          <div class="diff-preview" aria-label="Example source control diff">
+            <div class="diff-line removed"><span aria-hidden="true">−</span><code>timeout: 15,</code></div>
+            <div class="diff-line modified"><span aria-hidden="true">~</span><code>timeout: 30,</code></div>
+            <div class="diff-line added"><span aria-hidden="true">+</span><code>retries: 2,</code></div>
+          </div>
+          <p class="spec-note">The signs show what changed, with a little background colour to help each line stand out.</p>
+        </article>
+        <article class="spec-card terminal-card">
+          <h4>Terminal ANSI</h4>
+          <div class="terminal-grid">
+            <dl>
+              <div><dt>Black</dt><dd><code>bg0</code></dd></div>
+              <div><dt>Red</dt><dd><code>ember</code></dd></div>
+              <div><dt>Green</dt><dd><code>fern</code></dd></div>
+              <div><dt>Yellow</dt><dd><code>honey</code></dd></div>
+              <div><dt>Blue</dt><dd><code>cornflower</code></dd></div>
+              <div><dt>Magenta</dt><dd><code>orchid</code></dd></div>
+              <div><dt>Cyan</dt><dd><code>verdigris</code></dd></div>
+              <div><dt>White</dt><dd><code>fg1</code></dd></div>
+            </dl>
+            <dl>
+              <div><dt>Bright black</dt><dd><code>bg5</code></dd></div>
+              <div><dt>Bright red</dt><dd><code>coral</code></dd></div>
+              <div><dt>Bright green</dt><dd><code>fern</code></dd></div>
+              <div><dt>Bright yellow</dt><dd><code>apricot</code></dd></div>
+              <div><dt>Bright blue</dt><dd><code>lilac</code></dd></div>
+              <div><dt>Bright magenta</dt><dd><code>rose</code></dd></div>
+              <div><dt>Bright cyan</dt><dd><code>verdigris</code></dd></div>
+              <div><dt>Bright white</dt><dd><code>fg0</code></dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="guide" id="using-firelight">
+  <div class="section-panel">
+    <h2>Accessibility</h2>
+    <p>All six <code>fg</code> shades reach at least 4.5:1 contrast against <code>bg1</code>. Contrast changes with the background and opacity. Some accents have lower contrast, especially in Ash.</p>
+    <p>The Playground lets you check text contrast with different backgrounds, colours, and opacity levels.</p>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "id": "sample-editor",
+      "name": "firelight for Example Editor",
+      "kind": "theme",
+      "description": "An editor theme with matching syntax colours and interface elements.",
+      "url": "https://example.com/sample-editor",
+      "authors": [
+        {
+          "name": "Alex Example",
+          "url": "https://example.com/alex"
+        },
+        {
+          "name": "Sam Example",
+          "url": "https://example.com/sam"
+        }
+      ],
+      "app": "Example Editor",
+      "variants": [
+        "coal",
+        "smoulder",
+        "ash"
+      ],
+      "category": "editors",
+      "links": [
+        {
+          "label": "Install",
+          "url": "https://example.com/sample-editor/install"
+        },
+        {
+          "label": "Marketplace",
+          "url": "https://example.com/sample-editor/store"
+        }
+      ]
+    },
+    {
+      "id": "sample-terminal",
+      "name": "firelight for Sample Terminal",
+      "kind": "theme",
+      "description": "A terminal colour configuration with a dark background.",
+      "url": "https://example.com/sample-terminal",
+      "authors": [
+        {
+          "name": "Taylor Example",
+          "url": "https://example.com/taylor"
+        }
+      ],
+      "app": "Sample Terminal",
+      "variants": [
+        "coal"
+      ],
+      "category": "terminals",
+      "notes": "Coal only. The app frame follows your system settings."
+    },
+    {
+      "id": "sample-notes",
+      "name": "firelight for Example Notes",
+      "kind": "theme",
+      "description": "A theme for reading and writing longer notes.",
+      "url": "https://example.com/sample-notes",
+      "authors": [
+        {
+          "name": "Morgan Example",
+          "url": "https://example.com/morgan"
+        }
+      ],
+      "app": "Example Notes",
+      "variants": [
+        "coal",
+        "ash"
+      ],
+      "category": "tools",
+      "notes": "Uses a custom selection colour."
+    },
+    {
+      "id": "sample-portfolio",
+      "name": "Example portfolio",
+      "kind": "project",
+      "description": "A personal site using Ash backgrounds and Rose accents.",
+      "url": "https://example.com/sample-portfolio",
+      "authors": [
+        {
+          "name": "Jamie Example",
+          "url": "https://example.com/jamie"
+        }
+      ],
+      "category": "websites",
+      "links": [
+        {
+          "label": "Source",
+          "url": "https://example.com/sample-portfolio/source"
+        }
+      ]
+    },
+    {
+      "id": "sample-wallpapers",
+      "name": "Sample wallpaper collection",
+      "kind": "project",
+      "description": "Simple geometric wallpapers using colours from all three variants.",
+      "url": "https://example.com/sample-wallpapers",
+      "authors": [
+        {
+          "name": "Casey Example",
+          "url": "https://example.com/casey"
+        }
+      ],
+      "category": "desktop"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 348" role="img" aria-labelledby="title desc">
+  <title id="title">Firelight palettes: Coal, Smoulder, and Ash</title>
+  <desc id="desc">Each variant shows six background colours, six text colours, and ten accents on bg1.</desc>
+  <rect width="1180" height="348" fill="#1B1A19"/>
+
+  <g transform="translate(28 28)" font-family="ui-monospace, monospace" data-variant="coal">
+    <rect width="360" height="292" rx="5" fill="#232222" stroke="#484746"/>
+    <text x="24" y="36" fill="#F8EAE0" font-size="17" font-weight="700">coal</text>
+    <text x="24" y="58" fill="#9BA3B8" font-size="12">Dark</text>
+    <g aria-label="Backgrounds">
+      <text x="24" y="90" fill="#9BA3B8" font-size="12">Backgrounds</text>
+      <text x="336" y="90" fill="#9BA3B8" font-size="11" text-anchor="end">bg0 to bg5</text>
+      <rect x="24" y="100" width="52" height="34" fill="#1B1A19"/>
+      <rect x="76" y="100" width="52" height="34" fill="#232222"/>
+      <rect x="128" y="100" width="52" height="34" fill="#353434"/>
+      <rect x="180" y="100" width="52" height="34" fill="#484746"/>
+      <rect x="232" y="100" width="52" height="34" fill="#5D5C5C"/>
+      <rect x="284" y="100" width="52" height="34" fill="#777676"/>
+    </g>
+    <g aria-label="Text">
+      <text x="24" y="158" fill="#9BA3B8" font-size="12">Text</text>
+      <text x="336" y="158" fill="#9BA3B8" font-size="11" text-anchor="end">fg5 to fg0</text>
+      <rect x="24" y="168" width="52" height="34" fill="#818AA1"/>
+      <rect x="76" y="168" width="52" height="34" fill="#9BA3B8"/>
+      <rect x="128" y="168" width="52" height="34" fill="#B3B5BC"/>
+      <rect x="180" y="168" width="52" height="34" fill="#CBC6C3"/>
+      <rect x="232" y="168" width="52" height="34" fill="#E6D7CD"/>
+      <rect x="284" y="168" width="52" height="34" fill="#F8EAE0"/>
+    </g>
+    <g aria-label="Accents">
+      <text x="24" y="226" fill="#9BA3B8" font-size="12">Accents</text>
+      <rect x="24" y="236" width="31.2" height="34" fill="#F06B8A"/>
+      <rect x="55.2" y="236" width="31.2" height="34" fill="#FF7C78"/>
+      <rect x="86.4" y="236" width="31.2" height="34" fill="#FF936F"/>
+      <rect x="117.6" y="236" width="31.2" height="34" fill="#FFB57A"/>
+      <rect x="148.8" y="236" width="31.2" height="34" fill="#F8DC99"/>
+      <rect x="180" y="236" width="31.2" height="34" fill="#99CC78"/>
+      <rect x="211.2" y="236" width="31.2" height="34" fill="#62D4C5"/>
+      <rect x="242.4" y="236" width="31.2" height="34" fill="#8DB6FF"/>
+      <rect x="273.6" y="236" width="31.2" height="34" fill="#C9C6F8"/>
+      <rect x="304.8" y="236" width="31.2" height="34" fill="#D5A3F5"/>
+    </g>
+  </g>
+
+  <g transform="translate(410 28)" font-family="ui-monospace, monospace" data-variant="smoulder">
+    <rect width="360" height="292" rx="5" fill="#2E2E2E" stroke="#555454"/>
+    <text x="24" y="36" fill="#EAE2DC" font-size="17" font-weight="700">smoulder</text>
+    <text x="24" y="58" fill="#A3A8B4" font-size="12">Dark, softened</text>
+    <g aria-label="Backgrounds">
+      <text x="24" y="90" fill="#A3A8B4" font-size="12">Backgrounds</text>
+      <text x="336" y="90" fill="#A3A8B4" font-size="11" text-anchor="end">bg0 to bg5</text>
+      <rect x="24" y="100" width="52" height="34" fill="#232222"/>
+      <rect x="76" y="100" width="52" height="34" fill="#2E2E2E"/>
+      <rect x="128" y="100" width="52" height="34" fill="#414040"/>
+      <rect x="180" y="100" width="52" height="34" fill="#555454"/>
+      <rect x="232" y="100" width="52" height="34" fill="#6A6A69"/>
+      <rect x="284" y="100" width="52" height="34" fill="#848483"/>
+    </g>
+    <g aria-label="Text">
+      <text x="24" y="158" fill="#A3A8B4" font-size="12">Text</text>
+      <text x="336" y="158" fill="#A3A8B4" font-size="11" text-anchor="end">fg5 to fg0</text>
+      <rect x="24" y="168" width="52" height="34" fill="#9196A3"/>
+      <rect x="76" y="168" width="52" height="34" fill="#A3A8B4"/>
+      <rect x="128" y="168" width="52" height="34" fill="#B5B6B9"/>
+      <rect x="180" y="168" width="52" height="34" fill="#C5C3C0"/>
+      <rect x="232" y="168" width="52" height="34" fill="#D7CEC8"/>
+      <rect x="284" y="168" width="52" height="34" fill="#EAE2DC"/>
+    </g>
+    <g aria-label="Accents">
+      <text x="24" y="226" fill="#A3A8B4" font-size="12">Accents</text>
+      <rect x="24" y="236" width="31.2" height="34" fill="#DD7B8F"/>
+      <rect x="55.2" y="236" width="31.2" height="34" fill="#EB8B86"/>
+      <rect x="86.4" y="236" width="31.2" height="34" fill="#ED9D83"/>
+      <rect x="117.6" y="236" width="31.2" height="34" fill="#F1BB90"/>
+      <rect x="148.8" y="236" width="31.2" height="34" fill="#F1DDAD"/>
+      <rect x="180" y="236" width="31.2" height="34" fill="#A2C88B"/>
+      <rect x="211.2" y="236" width="31.2" height="34" fill="#81CFC3"/>
+      <rect x="242.4" y="236" width="31.2" height="34" fill="#98B7EC"/>
+      <rect x="273.6" y="236" width="31.2" height="34" fill="#CAC8ED"/>
+      <rect x="304.8" y="236" width="31.2" height="34" fill="#CEAAE6"/>
+    </g>
+  </g>
+
+  <g transform="translate(792 28)" font-family="ui-monospace, monospace" data-variant="ash">
+    <rect width="360" height="292" rx="5" fill="#F4EEEC" stroke="#B8B6B5"/>
+    <text x="24" y="36" fill="#3A3129" font-size="17" font-weight="700">ash</text>
+    <text x="24" y="58" fill="#5C606D" font-size="12">Light, warm</text>
+    <g aria-label="Backgrounds">
+      <text x="24" y="90" fill="#5C606D" font-size="12">Backgrounds</text>
+      <text x="336" y="90" fill="#5C606D" font-size="11" text-anchor="end">bg0 to bg5</text>
+      <rect x="24" y="100" width="52" height="34" fill="#FEF8F6"/>
+      <rect x="76" y="100" width="52" height="34" fill="#F4EEEC"/>
+      <rect x="128" y="100" width="52" height="34" fill="#D7D2CF"/>
+      <rect x="180" y="100" width="52" height="34" fill="#B8B6B5"/>
+      <rect x="232" y="100" width="52" height="34" fill="#9C9B9A"/>
+      <rect x="284" y="100" width="52" height="34" fill="#81807F"/>
+    </g>
+    <g aria-label="Text">
+      <text x="24" y="158" fill="#5C606D" font-size="12">Text</text>
+      <text x="336" y="158" fill="#5C606D" font-size="11" text-anchor="end">fg5 to fg0</text>
+      <rect x="24" y="168" width="52" height="34" fill="#676D7C"/>
+      <rect x="76" y="168" width="52" height="34" fill="#5C606D"/>
+      <rect x="128" y="168" width="52" height="34" fill="#53545A"/>
+      <rect x="180" y="168" width="52" height="34" fill="#4C4946"/>
+      <rect x="232" y="168" width="52" height="34" fill="#473E36"/>
+      <rect x="284" y="168" width="52" height="34" fill="#3A3129"/>
+    </g>
+    <g aria-label="Accents">
+      <text x="24" y="226" fill="#5C606D" font-size="12">Accents</text>
+      <rect x="24" y="236" width="31.2" height="34" fill="#B83F5F"/>
+      <rect x="55.2" y="236" width="31.2" height="34" fill="#C7504F"/>
+      <rect x="86.4" y="236" width="31.2" height="34" fill="#C86746"/>
+      <rect x="117.6" y="236" width="31.2" height="34" fill="#BE7C45"/>
+      <rect x="148.8" y="236" width="31.2" height="34" fill="#A1884B"/>
+      <rect x="180" y="236" width="31.2" height="34" fill="#69974A"/>
+      <rect x="211.2" y="236" width="31.2" height="34" fill="#279B8E"/>
+      <rect x="242.4" y="236" width="31.2" height="34" fill="#6387C9"/>
+      <rect x="273.6" y="236" width="31.2" height="34" fill="#8A86B3"/>
+      <rect x="304.8" y="236" width="31.2" height="34" fill="#A476C1"/>
+    </g>
+  </g>
+</svg>

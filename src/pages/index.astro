@@ -1,0 +1,27 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Icons from '../components/Icons.astro';
+import Downloads from '../components/Downloads.astro';
+import PaletteOverview from '../components/PaletteOverview.astro';
+import PaletteReference from '../components/PaletteReference.astro';
+import UsageGuide from '../components/UsageGuide.astro';
+import { sitePath } from '../lib/paths';
+---
+<SiteLayout title="firelight | Palette" description="A colour palette for interfaces and code, with three variants: Coal, Smoulder, and Ash." current="palette">
+  <Icons />
+  <section class="wrap palette-intro" aria-labelledby="palette-heading"><div><h1 id="palette-heading">Coal, Smoulder, and Ash.</h1><p>A colour palette for interfaces and code.</p></div><Downloads /></section>
+  <PaletteOverview />
+  <nav class="reference-nav wrap" aria-label="Palette sections"><a href="#coal">Coal</a><a href="#smoulder">Smoulder</a><a href="#ash">Ash</a><a href="#usage">Suggested uses</a><a href="#using-firelight">Accessibility</a></nav>
+  <PaletteReference />
+  <UsageGuide />
+  <noscript><p class="wrap">Interactive previews have moved to the <a href={sitePath('playground/')}>Playground</a>, including <a href={sitePath('playground/#compare')}>Compare variants</a>.</p></noscript>
+</SiteLayout>
+<script>
+  import '../scripts/palette';
+  import { sitePath } from '../lib/paths';
+  function followOldAnchor() {
+    if (location.hash === '#playground' || location.hash === '#compare') location.replace(sitePath('playground/' + (location.hash === '#compare' ? '#compare' : '')));
+  }
+  followOldAnchor();
+  window.addEventListener('hashchange', followOldAnchor);
+</script>

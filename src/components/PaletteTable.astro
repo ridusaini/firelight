@@ -1,0 +1,25 @@
+---
+import palette, { variantNames, type Variant } from '../lib/palette';
+import { copyInk } from '../lib/colour';
+interface Props { variant: Variant }
+const { variant } = Astro.props;
+const data = palette.variants[variant];
+---
+<section class="v" id={variant} data-fl={variant} aria-labelledby={variant + '-title'}>
+  <div class="variant-panel">
+    <h3 id={variant + '-title'}>{variantNames[variant]}</h3>
+    <p class="vd">{data.description}</p>
+    <div class="variant-tools"><span>22 colours</span><button type="button" data-copy-variant={variant}>Copy {variantNames[variant]} as CSS</button></div>
+    <table>
+      <thead><tr><th scope="col"><span class="sr-only">Colour</span></th><th scope="col">Name</th><th scope="col">Hex</th><th scope="col">RGB</th><th scope="col">HSL</th><th scope="col">OKLCH</th></tr></thead>
+      <tbody>{Object.entries(data.colors).map(([token, hex]) => {
+        const metadata = data.metadata[token as keyof typeof data.metadata];
+        const values = [['hex', hex], ['rgb', metadata.rgb], ['hsl', metadata.hsl], ['oklch', metadata.oklch]];
+        return <tr>
+          <td class="ch"><span style={'background:' + hex}></span></td><td class="cn">{token}</td>
+          {values.map(([format, value]) => <td class="cv"><button type="button" data-v={value} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variantNames[variant] + ' ' + token + ' as ' + format}><span>{value}</span><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td>)}
+        </tr>;
+      })}</tbody>
+    </table>
+  </div>
+</section>

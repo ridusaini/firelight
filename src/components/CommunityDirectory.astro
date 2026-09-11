@@ -1,0 +1,48 @@
+---
+import { communityGroups, validateCommunity, entryContext, type CommunityDirectory } from '../lib/community';
+interface Props { data: CommunityDirectory }
+const { data } = Astro.props;
+const groups = communityGroups(validateCommunity(data));
+---
+{groups.length === 0 ? <section class="section-panel community-empty" aria-labelledby="empty-title"><h2 id="empty-title">No projects listed yet</h2><p>Made a theme or project with firelight? Share it using the link above.</p></section> : groups.map(group =>
+<section class="section-panel community-group" aria-labelledby={group.kind + '-title'}>
+  <h2 id={group.kind + '-title'}>{group.title}</h2>
+  <ul class="community-list">{group.entries.map(entry => {
+    const context = entryContext(entry);
+    return <li class="community-entry" id={'project-' + entry.id}>
+      <h3><a class="community-title" href={entry.url} target="_blank" rel="noopener noreferrer">{entry.name}<span class="external-mark" aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></h3>
+      <p class="community-meta">by {entry.authors.map((author,index) => <>{index > 0 && ', '}<a href={author.url} target="_blank" rel="noopener noreferrer">{author.name}</a></>)}</p>
+      <p class="community-description">{entry.description}</p>
+      {entry.notes && <p class="community-note">{entry.notes}</p>}
+      {(context || (entry.links?.length ?? 0) > 0) && <div class="community-entry-details">
+        {context && <p class="community-meta community-context">{context}</p>}
+        {entry.links && entry.links.length > 0 && <ul class="community-links" aria-label={entry.name + ' links'}>
+          {entry.links.map(link => <li><a href={link.url} target="_blank" rel="noopener noreferrer">{link.label}</a></li>)}
+        </ul>}
+      </div>}
+    </li>;
+  })}</ul>
+</section>)}
+
+<style>
+.community-group + .community-group{margin-top:48px}
+.community-group h2,.community-empty h2{margin:0 0 20px;font-size:18px;color:var(--ink)}
+.community-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;list-style:none;margin:0;padding:0}
+.community-entry{min-width:0;padding:20px 24px;border:1px solid var(--site-bg3);border-radius:4px;background:var(--site-bg2);overflow-wrap:anywhere;transition:background .14s}
+.community-entry:hover,.community-entry:focus-within{background:color-mix(in srgb,var(--site-bg2) 70%,var(--site-bg3))}
+.community-entry h3{margin:0 0 4px;font-size:15px;line-height:1.5}
+.community-entry a{color:inherit;text-decoration:none}
+.community-entry a:hover{text-decoration:underline;text-underline-offset:4px}
+.community-entry a:focus-visible{outline:2px solid var(--site-rose);outline-offset:4px}
+.community-entry .community-title{color:var(--site-fg0)}
+.community-entry .community-title:hover,.community-entry .community-title:focus-visible{color:var(--site-fg0)}
+.external-mark{display:inline-block;margin-left:8px;font-size:13px;color:var(--ink-3)}
+.community-meta{margin:0;color:var(--site-fg3);font-size:11px;line-height:1.6}
+.community-description,.community-empty p{max-width:82ch;margin:12px 0 0;color:var(--ink);font-size:12px;line-height:1.7}
+.community-note{max-width:90ch;margin:8px 0 0;color:var(--site-fg3);font-size:11px;line-height:1.7}
+.community-entry-details{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;margin-top:16px}
+.community-context{flex:1 1 240px}
+.community-links{display:flex;flex-wrap:wrap;gap:10px 20px;list-style:none;margin:0 0 0 auto;padding:0;font-size:11px;color:var(--site-fg3)}
+.community-links a:hover,.community-links a:focus-visible{color:var(--site-fg0)}
+@media(max-width:600px){.community-entry{padding:18px}.community-entry-details{flex-direction:column;gap:10px}.community-context{flex:auto}.community-links{margin-left:0}}
+</style>

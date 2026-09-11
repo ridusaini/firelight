@@ -1,0 +1,16 @@
+---
+import palette, { variantNames, type Variant } from '../../lib/palette';
+import { contrastRatio, copyInk } from '../../lib/colour';
+interface Props { variant: Variant }
+const { variant } = Astro.props;
+const name = variantNames[variant];
+const { bg1: background, rose: foreground } = palette.variants[variant].colors;
+---
+<article class="comparison-card" data-fl={variant} data-comparison-variant={variant}>
+  <header><strong>{name}</strong><code><span data-comparison-background-token>bg1</span> / <span data-comparison-foreground-token>rose</span></code></header>
+  <div class="comparison-preview" data-comparison-preview role="img" aria-label={name + ' bg1, ' + background + ' and rose, ' + foreground}><span data-comparison-text>Hello, world.</span></div>
+  <footer>
+    {([{label:'BG', token:'bg1', value:background}, {label:'FG', token:'rose', value:foreground}]).map(({label,token,value}) => <span class="comparison-value"><small>{label}</small><button type="button" data-comparison-background-value={label === 'BG' ? '' : undefined} data-comparison-foreground-value={label === 'FG' ? '' : undefined} data-v={value} data-c={value} data-i={copyInk(value)} aria-label={'Copy ' + name + ' ' + token + ' as hex'}><span>{value}</span><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></span>)}
+  </footer>
+  <div class="comparison-contrast"><span>Text contrast</span><output data-comparison-contrast for="comparison-background comparison-foreground comparison-opacity" aria-label={name + ' text contrast ratio'}>{contrastRatio(background,foreground).toFixed(2)}:1</output></div>
+</article>

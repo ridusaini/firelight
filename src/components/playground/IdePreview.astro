@@ -1,0 +1,15 @@
+---
+import { defaultVariant } from '../../lib/palette';
+import { cssVariable } from '../../lib/colour';
+---
+<article class="code-demo" aria-label="IDE preview">
+          <header><b>IDE</b><span>theme.css</span></header>
+          <div class="editor-body" aria-label="CSS preview">
+            <div class="code-line"><i>1</i><code class="syn-comment">/* <span data-preview-variant>{defaultVariant}</span> / <span data-preview-accent>rose</span> */</code></div>
+            <div class="code-line"><i>2</i><code><span class="syn-property">.card</span> <span class="syn-text">&#123;</span></code></div>
+            <div class="code-line"><i>3</i><code class="indent"><span class="syn-property">background</span><span class="syn-text">:</span> <span class="syn-function">var</span><span class="syn-text">(</span><span class="syn-string" data-preview-css-token="bg2">{cssVariable(defaultVariant, "bg2")}</span><span class="syn-text">);</span></code></div>
+            <div class="code-line"><i>4</i><code class="indent"><span class="syn-property">border</span><span class="syn-text">:</span> <span class="syn-number">1px</span> <span class="syn-text">solid</span> <span class="syn-function">var</span><span class="syn-text">(</span><span class="syn-string" data-preview-css-token="bg3">{cssVariable(defaultVariant, "bg3")}</span><span class="syn-text">);</span></code></div>
+            <div class="code-line"><i>5</i><code class="indent"><span class="syn-property">color</span><span class="syn-text">:</span> <span class="syn-function">var</span><span class="syn-text">(</span><span class="syn-string" data-preview-css-token="fg1">{cssVariable(defaultVariant, "fg1")}</span><span class="syn-text">);</span></code></div>
+            <div class="code-line"><i>6</i><code class="syn-text">&#125;</code></div>
+          </div>
+        </article>

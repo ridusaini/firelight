@@ -1,0 +1,31 @@
+{
+  "name": "firelight",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <27"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "dev:samples": "astro dev --mode samples",
+    "check": "astro check",
+    "pretest": "npm run build",
+    "test": "tsx --test test/*.test.ts",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1",
+    "parse5": "8.0.1",
+    "postcss": "8.5.28",
+    "@astrojs/check": "0.9.10",
+    "typescript": "5.9.3",
+    "tsx": "4.23.13",
+    "@types/node": "22.20.2"
+  },
+  "dependencies": {
+    "astro": "7.3.2"
+  }
+}

@@ -1,0 +1,93 @@
+/* Firelight */
+
+:root {
+  /* Coal */
+  --fl-coal-bg0: #1b1a19;
+  --fl-coal-bg1: #232222;
+  --fl-coal-bg2: #353434;
+  --fl-coal-bg3: #484746;
+  --fl-coal-bg4: #5d5c5c;
+  --fl-coal-bg5: #777676;
+
+  --fl-coal-fg5: #818aa1;
+  --fl-coal-fg4: #9ba3b8;
+  --fl-coal-fg3: #b3b5bc;
+  --fl-coal-fg2: #cbc6c3;
+  --fl-coal-fg1: #e6d7cd;
+  --fl-coal-fg0: #f8eae0;
+
+  --fl-coal-rose: #f06b8a;
+  --fl-coal-ember: #ff7c78;
+  --fl-coal-coral: #ff936f;
+  --fl-coal-apricot: #ffb57a;
+  --fl-coal-honey: #f8dc99;
+  --fl-coal-fern: #99cc78;
+  --fl-coal-verdigris: #62d4c5;
+  --fl-coal-cornflower: #8db6ff;
+  --fl-coal-lilac: #c9c6f8;
+  --fl-coal-orchid: #d5a3f5;
+
+  --fl-coal-diff-add: #506343;
+  --fl-coal-diff-remove: #352929;
+  --fl-coal-diff-modify: #675372;
+
+  /* Smoulder */
+  --fl-smoulder-bg0: #232222;
+  --fl-smoulder-bg1: #2e2e2e;
+  --fl-smoulder-bg2: #414040;
+  --fl-smoulder-bg3: #555454;
+  --fl-smoulder-bg4: #6a6a69;
+  --fl-smoulder-bg5: #848483;
+
+  --fl-smoulder-fg5: #9196a3;
+  --fl-smoulder-fg4: #a3a8b4;
+  --fl-smoulder-fg3: #b5b6b9;
+  --fl-smoulder-fg2: #c5c3c0;
+  --fl-smoulder-fg1: #d7cec8;
+  --fl-smoulder-fg0: #eae2dc;
+
+  --fl-smoulder-rose: #dd7b8f;
+  --fl-smoulder-ember: #eb8b86;
+  --fl-smoulder-coral: #ed9d83;
+  --fl-smoulder-apricot: #f1bb90;
+  --fl-smoulder-honey: #f1ddad;
+  --fl-smoulder-fern: #a2c88b;
+  --fl-smoulder-verdigris: #81cfc3;
+  --fl-smoulder-cornflower: #98b7ec;
+  --fl-smoulder-lilac: #cac8ed;
+  --fl-smoulder-orchid: #ceaae6;
+
+  --fl-smoulder-diff-add: #3a3d37;
+  --fl-smoulder-diff-remove: #724f4e;
+  --fl-smoulder-diff-modify: #584e5e;
+
+  /* Ash */
+  --fl-ash-bg0: #fef8f6;
+  --fl-ash-bg1: #f4eeec;
+  --fl-ash-bg2: #d7d2cf;
+  --fl-ash-bg3: #b8b6b5;
+  --fl-ash-bg4: #9c9b9a;
+  --fl-ash-bg5: #81807f;
+
+  --fl-ash-fg5: #676d7c;
+  --fl-ash-fg4: #5c606d;
+  --fl-ash-fg3: #53545a;
+  --fl-ash-fg2: #4c4946;
+  --fl-ash-fg1: #473e36;
+  --fl-ash-fg0: #3a3129;
+
+  --fl-ash-rose: #b83f5f;
+  --fl-ash-ember: #c7504f;
+  --fl-ash-coral: #c86746;
+  --fl-ash-apricot: #be7c45;
+  --fl-ash-honey: #a1884b;
+  --fl-ash-fern: #69974a;
+  --fl-ash-verdigris: #279b8e;
+  --fl-ash-cornflower: #6387c9;
+  --fl-ash-lilac: #8a86b3;
+  --fl-ash-orchid: #a476c1;
+
+  --fl-ash-diff-add: #e5e7de;
+  --fl-ash-diff-remove: #e2b3b2;
+  --fl-ash-diff-modify: #d2bddb;
+}

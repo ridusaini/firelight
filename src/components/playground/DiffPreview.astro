@@ -1,0 +1,15 @@
+---
+import { defaultVariant } from '../../lib/palette';
+import { cssVariable } from '../../lib/colour';
+---
+<article class="diff-demo" aria-label="Diff preview">
+          <header><b>Diff</b><span>theme.css</span></header>
+          <div class="mini-diff-body">
+            <div class="mini-diff-line context"><i>12</i><b aria-hidden="true"> </b><code>.card &#123;</code></div>
+            <div class="mini-diff-line context"><i>13</i><b aria-hidden="true"> </b><code>background: var(<span data-preview-css-token="bg2">{cssVariable(defaultVariant, "bg2")}</span>);</code></div>
+            <div class="mini-diff-line removed"><i>14</i><b aria-hidden="true">−</b><code>border-color: var(<span data-preview-css-token="bg2">{cssVariable(defaultVariant, "bg2")}</span>);</code></div>
+            <div class="mini-diff-line added"><i>14</i><b aria-hidden="true">+</b><code>border-color: var(<span data-preview-css-token="bg3">{cssVariable(defaultVariant, "bg3")}</span>);</code></div>
+            <div class="mini-diff-line context"><i>15</i><b aria-hidden="true"> </b><code>color: var(<span data-preview-css-token="fg1">{cssVariable(defaultVariant, "fg1")}</span>);</code></div>
+            <div class="mini-diff-line context"><i>16</i><b aria-hidden="true"> </b><code>&#125;</code></div>
+          </div>
+        </article>

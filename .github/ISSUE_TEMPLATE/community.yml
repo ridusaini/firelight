@@ -1,0 +1,89 @@
+name: Add a community project
+description: Share a theme or project made with firelight
+title: "Add community project: "
+body:
+  - type: markdown
+    attributes:
+      value: "Projects stay hosted and maintained by their creators. We review submissions before adding them to the Community page."
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What are you sharing?
+      options:
+        - App theme
+        - Project
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Project URL
+      description: A public HTTPS link to the repository or project page
+    validations:
+      required: true
+  - type: textarea
+    id: authors
+    attributes:
+      label: Creators
+      description: Names and public profile links of the people who made the project
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: Short description
+      description: One sentence about the project
+    validations:
+      required: true
+  - type: dropdown
+    id: relationship
+    attributes:
+      label: Your connection to the project
+      options:
+        - I created or help maintain it
+        - I am recommending someone else's work
+    validations:
+      required: true
+  - type: input
+    id: app
+    attributes:
+      label: App
+      description: For themes, which application is it for?
+  - type: dropdown
+    id: variants
+    attributes:
+      label: Supported variants
+      description: For themes, select the variants that are available
+      multiple: true
+      options:
+        - Coal
+        - Smoulder
+        - Ash
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Editors
+        - Terminals
+        - Browsers
+        - Desktop
+        - Tools
+        - Websites
+        - Other
+  - type: textarea
+    id: preview
+    attributes:
+      label: Screenshot and installation
+      description: For themes, add a screenshot and link to installation instructions. You can also link a demo or marketplace page.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Testing and other notes
+      description: Which variants did you test? Mention any limitations, intentional palette changes, or licensing details worth knowing.

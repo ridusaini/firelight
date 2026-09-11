@@ -1,0 +1,17 @@
+name: Report a problem
+description: Something on the site or in the palette files is not working
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: What did you expect, and what happened instead?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      description: Include the page, variant, browser or app, and a screenshot if helpful.
+    validations:
+      required: true

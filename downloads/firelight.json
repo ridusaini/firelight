@@ -1,0 +1,740 @@
+{
+  "name": "Firelight",
+  "version": "1.0.0",
+  "schemaVersion": 1,
+  "description": "A colour palette for interfaces and code.",
+  "defaultVariant": "coal",
+  "variants": {
+    "coal": {
+      "appearance": "dark",
+      "description": "Dark, with neutral backgrounds and text shades that range from cool to warm.",
+      "colors": {
+        "bg0": "#1B1A19",
+        "bg1": "#232222",
+        "bg2": "#353434",
+        "bg3": "#484746",
+        "bg4": "#5D5C5C",
+        "bg5": "#777676",
+        "fg5": "#818AA1",
+        "fg4": "#9BA3B8",
+        "fg3": "#B3B5BC",
+        "fg2": "#CBC6C3",
+        "fg1": "#E6D7CD",
+        "fg0": "#F8EAE0",
+        "rose": "#F06B8A",
+        "ember": "#FF7C78",
+        "coral": "#FF936F",
+        "apricot": "#FFB57A",
+        "honey": "#F8DC99",
+        "fern": "#99CC78",
+        "verdigris": "#62D4C5",
+        "cornflower": "#8DB6FF",
+        "lilac": "#C9C6F8",
+        "orchid": "#D5A3F5"
+      },
+      "surfaces": {
+        "diff-add": "#506343",
+        "diff-remove": "#352929",
+        "diff-modify": "#675372"
+      },
+      "metadata": {
+        "bg0": {
+          "cssVariable": "--fl-coal-bg0",
+          "rgb": "rgb(27, 26, 25)",
+          "hsl": "hsl(30, 4%, 10%)",
+          "oklch": "oklch(0.219 0.002 67.7)",
+          "contrast": 1.1
+        },
+        "bg1": {
+          "cssVariable": "--fl-coal-bg1",
+          "rgb": "rgb(35, 34, 34)",
+          "hsl": "hsl(0, 1%, 14%)",
+          "oklch": "oklch(0.253 0.002 17.3)",
+          "contrast": 1.0
+        },
+        "bg2": {
+          "cssVariable": "--fl-coal-bg2",
+          "rgb": "rgb(53, 52, 52)",
+          "hsl": "hsl(0, 1%, 21%)",
+          "oklch": "oklch(0.326 0.001 17.2)",
+          "contrast": 1.28
+        },
+        "bg3": {
+          "cssVariable": "--fl-coal-bg3",
+          "rgb": "rgb(72, 71, 70)",
+          "hsl": "hsl(30, 1%, 28%)",
+          "oklch": "oklch(0.399 0.002 67.8)",
+          "contrast": 1.71
+        },
+        "bg4": {
+          "cssVariable": "--fl-coal-bg4",
+          "rgb": "rgb(93, 92, 92)",
+          "hsl": "hsl(0, 1%, 36%)",
+          "oklch": "oklch(0.476 0.001 17.2)",
+          "contrast": 2.38
+        },
+        "bg5": {
+          "cssVariable": "--fl-coal-bg5",
+          "rgb": "rgb(119, 118, 118)",
+          "hsl": "hsl(0, 0%, 46%)",
+          "oklch": "oklch(0.567 0.001 17.2)",
+          "contrast": 3.5
+        },
+        "fg5": {
+          "cssVariable": "--fl-coal-fg5",
+          "rgb": "rgb(129, 138, 161)",
+          "hsl": "hsl(223, 15%, 57%)",
+          "oklch": "oklch(0.634 0.036 268.5)",
+          "contrast": 4.6
+        },
+        "fg4": {
+          "cssVariable": "--fl-coal-fg4",
+          "rgb": "rgb(155, 163, 184)",
+          "hsl": "hsl(223, 17%, 66%)",
+          "oklch": "oklch(0.716 0.032 269.0)",
+          "contrast": 6.29
+        },
+        "fg3": {
+          "cssVariable": "--fl-coal-fg3",
+          "rgb": "rgb(179, 181, 188)",
+          "hsl": "hsl(227, 6%, 72%)",
+          "oklch": "oklch(0.774 0.010 273.3)",
+          "contrast": 7.75
+        },
+        "fg2": {
+          "cssVariable": "--fl-coal-fg2",
+          "rgb": "rgb(203, 198, 195)",
+          "hsl": "hsl(23, 7%, 78%)",
+          "oklch": "oklch(0.830 0.007 53.4)",
+          "contrast": 9.37
+        },
+        "fg1": {
+          "cssVariable": "--fl-coal-fg1",
+          "rgb": "rgb(230, 215, 205)",
+          "hsl": "hsl(24, 33%, 85%)",
+          "oklch": "oklch(0.889 0.021 56.1)",
+          "contrast": 11.31
+        },
+        "fg0": {
+          "cssVariable": "--fl-coal-fg0",
+          "rgb": "rgb(248, 234, 224)",
+          "hsl": "hsl(25, 63%, 93%)",
+          "oklch": "oklch(0.945 0.020 58.1)",
+          "contrast": 13.48
+        },
+        "rose": {
+          "cssVariable": "--fl-coal-rose",
+          "rgb": "rgb(240, 107, 138)",
+          "hsl": "hsl(346, 82%, 68%)",
+          "oklch": "oklch(0.697 0.166 7.9)",
+          "contrast": 5.42
+        },
+        "ember": {
+          "cssVariable": "--fl-coal-ember",
+          "rgb": "rgb(255, 124, 120)",
+          "hsl": "hsl(2, 100%, 74%)",
+          "oklch": "oklch(0.737 0.161 23.6)",
+          "contrast": 6.35
+        },
+        "coral": {
+          "cssVariable": "--fl-coal-coral",
+          "rgb": "rgb(255, 147, 111)",
+          "hsl": "hsl(15, 100%, 72%)",
+          "oklch": "oklch(0.770 0.140 39.1)",
+          "contrast": 7.3
+        },
+        "apricot": {
+          "cssVariable": "--fl-coal-apricot",
+          "rgb": "rgb(255, 181, 122)",
+          "hsl": "hsl(27, 100%, 74%)",
+          "oklch": "oklch(0.830 0.114 58.9)",
+          "contrast": 9.18
+        },
+        "honey": {
+          "cssVariable": "--fl-coal-honey",
+          "rgb": "rgb(248, 220, 153)",
+          "hsl": "hsl(42, 87%, 79%)",
+          "oklch": "oklch(0.903 0.090 87.8)",
+          "contrast": 11.85
+        },
+        "fern": {
+          "cssVariable": "--fl-coal-fern",
+          "rgb": "rgb(153, 204, 120)",
+          "hsl": "hsl(96, 45%, 64%)",
+          "oklch": "oklch(0.790 0.125 134.0)",
+          "contrast": 8.51
+        },
+        "verdigris": {
+          "cssVariable": "--fl-coal-verdigris",
+          "rgb": "rgb(98, 212, 197)",
+          "hsl": "hsl(172, 57%, 61%)",
+          "oklch": "oklch(0.800 0.106 183.8)",
+          "contrast": 8.87
+        },
+        "cornflower": {
+          "cssVariable": "--fl-coal-cornflower",
+          "rgb": "rgb(141, 182, 255)",
+          "hsl": "hsl(218, 100%, 78%)",
+          "oklch": "oklch(0.775 0.114 261.5)",
+          "contrast": 7.76
+        },
+        "lilac": {
+          "cssVariable": "--fl-coal-lilac",
+          "rgb": "rgb(201, 198, 248)",
+          "hsl": "hsl(244, 78%, 87%)",
+          "oklch": "oklch(0.846 0.069 287.6)",
+          "contrast": 9.76
+        },
+        "orchid": {
+          "cssVariable": "--fl-coal-orchid",
+          "rgb": "rgb(213, 163, 245)",
+          "hsl": "hsl(277, 80%, 80%)",
+          "oklch": "oklch(0.790 0.125 311.6)",
+          "contrast": 7.85
+        }
+      },
+      "surfaceMetadata": {
+        "diff-add": {
+          "cssVariable": "--fl-coal-diff-add",
+          "rgb": "rgb(80, 99, 67)",
+          "hsl": "hsl(96, 19%, 33%)",
+          "oklch": "oklch(0.475 0.055 133.1)",
+          "contrast": 2.42
+        },
+        "diff-remove": {
+          "cssVariable": "--fl-coal-diff-remove",
+          "rgb": "rgb(53, 41, 41)",
+          "hsl": "hsl(0, 13%, 18%)",
+          "oklch": "oklch(0.295 0.018 18.2)",
+          "contrast": 1.13
+        },
+        "diff-modify": {
+          "cssVariable": "--fl-coal-diff-modify",
+          "rgb": "rgb(103, 83, 114)",
+          "hsl": "hsl(279, 16%, 39%)",
+          "oklch": "oklch(0.474 0.055 313.4)",
+          "contrast": 2.31
+        }
+      }
+    },
+    "smoulder": {
+      "appearance": "dark",
+      "description": "A softer dark variant with gentler contrast and accents.",
+      "colors": {
+        "bg0": "#232222",
+        "bg1": "#2E2E2E",
+        "bg2": "#414040",
+        "bg3": "#555454",
+        "bg4": "#6A6A69",
+        "bg5": "#848483",
+        "fg5": "#9196A3",
+        "fg4": "#A3A8B4",
+        "fg3": "#B5B6B9",
+        "fg2": "#C5C3C0",
+        "fg1": "#D7CEC8",
+        "fg0": "#EAE2DC",
+        "rose": "#DD7B8F",
+        "ember": "#EB8B86",
+        "coral": "#ED9D83",
+        "apricot": "#F1BB90",
+        "honey": "#F1DDAD",
+        "fern": "#A2C88B",
+        "verdigris": "#81CFC3",
+        "cornflower": "#98B7EC",
+        "lilac": "#CAC8ED",
+        "orchid": "#CEAAE6"
+      },
+      "surfaces": {
+        "diff-add": "#3A3D37",
+        "diff-remove": "#724F4E",
+        "diff-modify": "#584E5E"
+      },
+      "metadata": {
+        "bg0": {
+          "cssVariable": "--fl-smoulder-bg0",
+          "rgb": "rgb(35, 34, 34)",
+          "hsl": "hsl(0, 1%, 14%)",
+          "oklch": "oklch(0.253 0.002 17.3)",
+          "contrast": 1.17
+        },
+        "bg1": {
+          "cssVariable": "--fl-smoulder-bg1",
+          "rgb": "rgb(46, 46, 46)",
+          "hsl": "hsl(0, 0%, 18%)",
+          "oklch": "oklch(0.301 0.000 0.0)",
+          "contrast": 1.0
+        },
+        "bg2": {
+          "cssVariable": "--fl-smoulder-bg2",
+          "rgb": "rgb(65, 64, 64)",
+          "hsl": "hsl(0, 1%, 25%)",
+          "oklch": "oklch(0.372 0.001 17.2)",
+          "contrast": 1.31
+        },
+        "bg3": {
+          "cssVariable": "--fl-smoulder-bg3",
+          "rgb": "rgb(85, 84, 84)",
+          "hsl": "hsl(0, 1%, 33%)",
+          "oklch": "oklch(0.447 0.001 17.2)",
+          "contrast": 1.8
+        },
+        "bg4": {
+          "cssVariable": "--fl-smoulder-bg4",
+          "rgb": "rgb(106, 106, 105)",
+          "hsl": "hsl(60, 0%, 41%)",
+          "oklch": "oklch(0.524 0.002 106.5)",
+          "contrast": 2.51
+        },
+        "bg5": {
+          "cssVariable": "--fl-smoulder-bg5",
+          "rgb": "rgb(132, 132, 131)",
+          "hsl": "hsl(60, 0%, 52%)",
+          "oklch": "oklch(0.613 0.001 106.4)",
+          "contrast": 3.63
+        },
+        "fg5": {
+          "cssVariable": "--fl-smoulder-fg5",
+          "rgb": "rgb(145, 150, 163)",
+          "hsl": "hsl(223, 9%, 60%)",
+          "oklch": "oklch(0.673 0.020 269.0)",
+          "contrast": 4.59
+        },
+        "fg4": {
+          "cssVariable": "--fl-smoulder-fg4",
+          "rgb": "rgb(163, 168, 180)",
+          "hsl": "hsl(222, 10%, 67%)",
+          "oklch": "oklch(0.731 0.018 267.7)",
+          "contrast": 5.7
+        },
+        "fg3": {
+          "cssVariable": "--fl-smoulder-fg3",
+          "rgb": "rgb(181, 182, 185)",
+          "hsl": "hsl(225, 3%, 72%)",
+          "oklch": "oklch(0.776 0.004 271.4)",
+          "contrast": 6.7
+        },
+        "fg2": {
+          "cssVariable": "--fl-smoulder-fg2",
+          "rgb": "rgb(197, 195, 192)",
+          "hsl": "hsl(36, 4%, 76%)",
+          "oklch": "oklch(0.818 0.005 78.3)",
+          "contrast": 7.72
+        },
+        "fg1": {
+          "cssVariable": "--fl-smoulder-fg1",
+          "rgb": "rgb(215, 206, 200)",
+          "hsl": "hsl(24, 16%, 81%)",
+          "oklch": "oklch(0.857 0.013 56.2)",
+          "contrast": 8.76
+        },
+        "fg0": {
+          "cssVariable": "--fl-smoulder-fg0",
+          "rgb": "rgb(234, 226, 220)",
+          "hsl": "hsl(26, 25%, 89%)",
+          "oklch": "oklch(0.917 0.012 59.6)",
+          "contrast": 10.61
+        },
+        "rose": {
+          "cssVariable": "--fl-smoulder-rose",
+          "rgb": "rgb(221, 123, 143)",
+          "hsl": "hsl(348, 59%, 67%)",
+          "oklch": "oklch(0.696 0.123 7.7)",
+          "contrast": 4.72
+        },
+        "ember": {
+          "cssVariable": "--fl-smoulder-ember",
+          "rgb": "rgb(235, 139, 134)",
+          "hsl": "hsl(3, 72%, 72%)",
+          "oklch": "oklch(0.737 0.118 23.5)",
+          "contrast": 5.54
+        },
+        "coral": {
+          "cssVariable": "--fl-smoulder-coral",
+          "rgb": "rgb(237, 157, 131)",
+          "hsl": "hsl(15, 75%, 72%)",
+          "oklch": "oklch(0.769 0.103 38.8)",
+          "contrast": 6.31
+        },
+        "apricot": {
+          "cssVariable": "--fl-smoulder-apricot",
+          "rgb": "rgb(241, 187, 144)",
+          "hsl": "hsl(27, 78%, 75%)",
+          "oklch": "oklch(0.831 0.084 59.8)",
+          "contrast": 7.92
+        },
+        "honey": {
+          "cssVariable": "--fl-smoulder-honey",
+          "rgb": "rgb(241, 221, 173)",
+          "hsl": "hsl(42, 71%, 81%)",
+          "oklch": "oklch(0.902 0.066 88.1)",
+          "contrast": 10.14
+        },
+        "fern": {
+          "cssVariable": "--fl-smoulder-fern",
+          "rgb": "rgb(162, 200, 139)",
+          "hsl": "hsl(97, 36%, 66%)",
+          "oklch": "oklch(0.790 0.093 134.1)",
+          "contrast": 7.22
+        },
+        "verdigris": {
+          "cssVariable": "--fl-smoulder-verdigris",
+          "rgb": "rgb(129, 207, 195)",
+          "hsl": "hsl(171, 45%, 66%)",
+          "oklch": "oklch(0.801 0.079 183.5)",
+          "contrast": 7.53
+        },
+        "cornflower": {
+          "cssVariable": "--fl-smoulder-cornflower",
+          "rgb": "rgb(152, 183, 236)",
+          "hsl": "hsl(218, 69%, 76%)",
+          "oklch": "oklch(0.776 0.084 261.0)",
+          "contrast": 6.67
+        },
+        "lilac": {
+          "cssVariable": "--fl-smoulder-lilac",
+          "rgb": "rgb(202, 200, 237)",
+          "hsl": "hsl(243, 51%, 86%)",
+          "oklch": "oklch(0.846 0.051 287.7)",
+          "contrast": 8.4
+        },
+        "orchid": {
+          "cssVariable": "--fl-smoulder-orchid",
+          "rgb": "rgb(206, 170, 230)",
+          "hsl": "hsl(276, 55%, 78%)",
+          "oklch": "oklch(0.790 0.092 311.5)",
+          "contrast": 6.8
+        }
+      },
+      "surfaceMetadata": {
+        "diff-add": {
+          "cssVariable": "--fl-smoulder-diff-add",
+          "rgb": "rgb(58, 61, 55)",
+          "hsl": "hsl(90, 5%, 23%)",
+          "oklch": "oklch(0.355 0.011 128.8)",
+          "contrast": 1.23
+        },
+        "diff-remove": {
+          "cssVariable": "--fl-smoulder-diff-remove",
+          "rgb": "rgb(114, 79, 78)",
+          "hsl": "hsl(2, 19%, 38%)",
+          "oklch": "oklch(0.465 0.048 20.9)",
+          "contrast": 1.9
+        },
+        "diff-modify": {
+          "cssVariable": "--fl-smoulder-diff-modify",
+          "rgb": "rgb(88, 78, 94)",
+          "hsl": "hsl(278, 9%, 34%)",
+          "oklch": "oklch(0.440 0.029 312.9)",
+          "contrast": 1.72
+        }
+      }
+    },
+    "ash": {
+      "appearance": "light",
+      "description": "A light variant with warm backgrounds and softer accents.",
+      "colors": {
+        "bg0": "#FEF8F6",
+        "bg1": "#F4EEEC",
+        "bg2": "#D7D2CF",
+        "bg3": "#B8B6B5",
+        "bg4": "#9C9B9A",
+        "bg5": "#81807F",
+        "fg5": "#676D7C",
+        "fg4": "#5C606D",
+        "fg3": "#53545A",
+        "fg2": "#4C4946",
+        "fg1": "#473E36",
+        "fg0": "#3A3129",
+        "rose": "#B83F5F",
+        "ember": "#C7504F",
+        "coral": "#C86746",
+        "apricot": "#BE7C45",
+        "honey": "#A1884B",
+        "fern": "#69974A",
+        "verdigris": "#279B8E",
+        "cornflower": "#6387C9",
+        "lilac": "#8A86B3",
+        "orchid": "#A476C1"
+      },
+      "surfaces": {
+        "diff-add": "#E5E7DE",
+        "diff-remove": "#E2B3B2",
+        "diff-modify": "#D2BDDB"
+      },
+      "metadata": {
+        "bg0": {
+          "cssVariable": "--fl-ash-bg0",
+          "rgb": "rgb(254, 248, 246)",
+          "hsl": "hsl(15, 80%, 98%)",
+          "oklch": "oklch(0.983 0.007 39.5)",
+          "contrast": 1.09
+        },
+        "bg1": {
+          "cssVariable": "--fl-ash-bg1",
+          "rgb": "rgb(244, 238, 236)",
+          "hsl": "hsl(15, 27%, 94%)",
+          "oklch": "oklch(0.953 0.007 39.5)",
+          "contrast": 1
+        },
+        "bg2": {
+          "cssVariable": "--fl-ash-bg2",
+          "rgb": "rgb(215, 210, 207)",
+          "hsl": "hsl(22, 9%, 83%)",
+          "oklch": "oklch(0.867 0.007 53.4)",
+          "contrast": 1.31
+        },
+        "bg3": {
+          "cssVariable": "--fl-ash-bg3",
+          "rgb": "rgb(184, 182, 181)",
+          "hsl": "hsl(20, 2%, 72%)",
+          "oklch": "oklch(0.778 0.003 48.7)",
+          "contrast": 1.76
+        },
+        "bg4": {
+          "cssVariable": "--fl-ash-bg4",
+          "rgb": "rgb(156, 155, 154)",
+          "hsl": "hsl(30, 1%, 61%)",
+          "oklch": "oklch(0.690 0.002 67.8)",
+          "contrast": 2.42
+        },
+        "bg5": {
+          "cssVariable": "--fl-ash-bg5",
+          "rgb": "rgb(129, 128, 127)",
+          "hsl": "hsl(30, 1%, 50%)",
+          "oklch": "oklch(0.600 0.002 67.8)",
+          "contrast": 3.43
+        },
+        "fg5": {
+          "cssVariable": "--fl-ash-fg5",
+          "rgb": "rgb(103, 109, 124)",
+          "hsl": "hsl(223, 9%, 45%)",
+          "oklch": "oklch(0.535 0.025 268.2)",
+          "contrast": 4.51
+        },
+        "fg4": {
+          "cssVariable": "--fl-ash-fg4",
+          "rgb": "rgb(92, 96, 109)",
+          "hsl": "hsl(226, 8%, 39%)",
+          "oklch": "oklch(0.490 0.021 272.0)",
+          "contrast": 5.46
+        },
+        "fg3": {
+          "cssVariable": "--fl-ash-fg3",
+          "rgb": "rgb(83, 84, 90)",
+          "hsl": "hsl(231, 4%, 34%)",
+          "oklch": "oklch(0.447 0.010 278.4)",
+          "contrast": 6.57
+        },
+        "fg2": {
+          "cssVariable": "--fl-ash-fg2",
+          "rgb": "rgb(76, 73, 70)",
+          "hsl": "hsl(30, 4%, 29%)",
+          "oklch": "oklch(0.407 0.006 67.6)",
+          "contrast": 7.79
+        },
+        "fg1": {
+          "cssVariable": "--fl-ash-fg1",
+          "rgb": "rgb(71, 62, 54)",
+          "hsl": "hsl(28, 14%, 25%)",
+          "oklch": "oklch(0.371 0.018 63.9)",
+          "contrast": 9.1
+        },
+        "fg0": {
+          "cssVariable": "--fl-ash-fg0",
+          "rgb": "rgb(58, 49, 41)",
+          "hsl": "hsl(28, 17%, 19%)",
+          "oklch": "oklch(0.320 0.019 63.7)",
+          "contrast": 11.08
+        },
+        "rose": {
+          "cssVariable": "--fl-ash-rose",
+          "rgb": "rgb(184, 63, 95)",
+          "hsl": "hsl(344, 49%, 48%)",
+          "oklch": "oklch(0.546 0.157 7.9)",
+          "contrast": 4.67
+        },
+        "ember": {
+          "cssVariable": "--fl-ash-ember",
+          "rgb": "rgb(199, 80, 79)",
+          "hsl": "hsl(0, 52%, 55%)",
+          "oklch": "oklch(0.587 0.153 23.5)",
+          "contrast": 3.9
+        },
+        "coral": {
+          "cssVariable": "--fl-ash-coral",
+          "rgb": "rgb(200, 103, 70)",
+          "hsl": "hsl(15, 54%, 53%)",
+          "oklch": "oklch(0.621 0.132 39.3)",
+          "contrast": 3.33
+        },
+        "apricot": {
+          "cssVariable": "--fl-ash-apricot",
+          "rgb": "rgb(190, 124, 69)",
+          "hsl": "hsl(27, 48%, 51%)",
+          "oklch": "oklch(0.644 0.109 58.9)",
+          "contrast": 2.97
+        },
+        "honey": {
+          "cssVariable": "--fl-ash-honey",
+          "rgb": "rgb(161, 136, 75)",
+          "hsl": "hsl(43, 36%, 46%)",
+          "oklch": "oklch(0.636 0.086 87.6)",
+          "contrast": 2.98
+        },
+        "fern": {
+          "cssVariable": "--fl-ash-fern",
+          "rgb": "rgb(105, 151, 74)",
+          "hsl": "hsl(96, 34%, 44%)",
+          "oklch": "oklch(0.625 0.118 134.1)",
+          "contrast": 2.99
+        },
+        "verdigris": {
+          "cssVariable": "--fl-ash-verdigris",
+          "rgb": "rgb(39, 155, 142)",
+          "hsl": "hsl(173, 60%, 38%)",
+          "oklch": "oklch(0.624 0.101 183.8)",
+          "contrast": 2.97
+        },
+        "cornflower": {
+          "cssVariable": "--fl-ash-cornflower",
+          "rgb": "rgb(99, 135, 201)",
+          "hsl": "hsl(219, 49%, 59%)",
+          "oklch": "oklch(0.625 0.108 261.9)",
+          "contrast": 3.13
+        },
+        "lilac": {
+          "cssVariable": "--fl-ash-lilac",
+          "rgb": "rgb(138, 134, 179)",
+          "hsl": "hsl(245, 23%, 61%)",
+          "oklch": "oklch(0.640 0.067 288.4)",
+          "contrast": 2.98
+        },
+        "orchid": {
+          "cssVariable": "--fl-ash-orchid",
+          "rgb": "rgb(164, 118, 193)",
+          "hsl": "hsl(277, 38%, 61%)",
+          "oklch": "oklch(0.640 0.119 311.5)",
+          "contrast": 3.08
+        }
+      },
+      "surfaceMetadata": {
+        "diff-add": {
+          "cssVariable": "--fl-ash-diff-add",
+          "rgb": "rgb(229, 231, 222)",
+          "hsl": "hsl(73, 16%, 89%)",
+          "oklch": "oklch(0.924 0.012 116.8)",
+          "contrast": 1.09
+        },
+        "diff-remove": {
+          "cssVariable": "--fl-ash-diff-remove",
+          "rgb": "rgb(226, 179, 178)",
+          "hsl": "hsl(1, 45%, 79%)",
+          "oklch": "oklch(0.809 0.055 19.8)",
+          "contrast": 1.61
+        },
+        "diff-modify": {
+          "cssVariable": "--fl-ash-diff-modify",
+          "rgb": "rgb(210, 189, 219)",
+          "hsl": "hsl(282, 29%, 80%)",
+          "oklch": "oklch(0.825 0.047 315.8)",
+          "contrast": 1.52
+        }
+      }
+    }
+  },
+  "usage": {
+    "note": "Some examples for interfaces, code, and terminals.",
+    "interface": {
+      "bg-code": "bg0",
+      "bg": "bg1",
+      "bg-raised": "bg2",
+      "border": "bg3",
+      "fg-gutter": "bg4",
+      "fg-comment": "bg5",
+      "fg-muted": "fg5",
+      "fg-label": "fg4",
+      "fg": "fg1",
+      "fg-display": "fg0",
+      "cursor": "rose",
+      "danger": "ember",
+      "accent": "rose",
+      "warning": "honey",
+      "success": "fern",
+      "info": "verdigris",
+      "link": "cornflower",
+      "focus": "lilac",
+      "link-visited": "orchid"
+    },
+    "syntax": {
+      "comment": "bg5",
+      "punctuation": "bg5",
+      "text": "fg1",
+      "variable": "fg1",
+      "keyword": "orchid",
+      "control": "orchid",
+      "function": "cornflower",
+      "method": "cornflower",
+      "property": "cornflower",
+      "string": "fern",
+      "number": "apricot",
+      "constant": "apricot",
+      "type": "honey",
+      "class": "honey",
+      "attribute": "honey",
+      "operator": "verdigris",
+      "parameter": "coral",
+      "tag": "coral",
+      "deprecated": "coral",
+      "regex": "rose",
+      "escape": "rose"
+    },
+    "diagnostics": {
+      "error": "ember",
+      "warning": "honey",
+      "info": "verdigris",
+      "hint": "verdigris",
+      "success": "fern"
+    },
+    "diff": {
+      "added": {
+        "foreground": "fern",
+        "background": "diff-add"
+      },
+      "removed": {
+        "foreground": "ember",
+        "background": "diff-remove"
+      },
+      "modified": {
+        "foreground": "orchid",
+        "background": "diff-modify"
+      }
+    },
+    "terminal": {
+      "foreground": "fg1",
+      "background": "bg1",
+      "cursor": "rose",
+      "selection": {
+        "token": "lilac",
+        "alpha": 0.12
+      },
+      "ansi": {
+        "black": "bg0",
+        "red": "ember",
+        "green": "fern",
+        "yellow": "honey",
+        "blue": "cornflower",
+        "magenta": "orchid",
+        "cyan": "verdigris",
+        "white": "fg1",
+        "brightBlack": "bg5",
+        "brightRed": "coral",
+        "brightGreen": "fern",
+        "brightYellow": "apricot",
+        "brightBlue": "lilac",
+        "brightMagenta": "rose",
+        "brightCyan": "verdigris",
+        "brightWhite": "fg0"
+      }
+    }
+  }
+}

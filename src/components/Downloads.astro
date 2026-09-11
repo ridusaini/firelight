@@ -1,0 +1,22 @@
+---
+import { sitePath } from '../lib/paths';
+---
+<div class="downloads" aria-label="Firelight downloads and repository">
+  <div class="downloads-heading"><h2>Download</h2><a class="github-link" href="https://github.com/ridusaini/firelight" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><img src={sitePath('assets/github.svg')} width="16" height="16" alt="" />GitHub</a></div>
+  <a class="download" href={sitePath('firelight.css')} download><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#dn" /></svg><span><strong>firelight.css</strong><small>All three palettes as CSS variables</small></span></a>
+  <a class="download" href={sitePath('firelight.json')} download><svg viewBox="0 0 16 16" aria-hidden="true"><use href="#dn" /></svg><span><strong>firelight.json</strong><small>Colour values, CSS names, and suggested uses</small></span></a>
+</div>
+<style>
+.downloads{display:grid;gap:18px;width:100%;max-width:320px}
+.downloads-heading{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.downloads-heading h2{font-size:11px;color:var(--ink-3);font-weight:400;margin:0;text-transform:uppercase;letter-spacing:.08em}
+.github-link{display:inline-flex;align-items:center;gap:8px;color:var(--ink-2);font-size:12px;text-decoration:none}
+.download{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:4px;background:transparent;text-decoration:none;color:var(--ink);transition:background .14s}
+.download:hover,.download:focus-visible{background:var(--site-bg2)}
+.download:hover strong,.download:focus-visible strong{text-decoration:underline;text-underline-offset:4px;color:var(--site-fg0)}
+.download:hover small,.download:focus-visible small{color:var(--site-fg3)}
+.github-link:hover,.github-link:focus-visible{color:var(--site-rose)}
+.download svg{width:14px;height:14px;flex:none;color:var(--ink-3)}
+.download span{display:grid;gap:3px}.download strong{font-size:12px}.download small{font-size:10.5px;color:var(--ink-3)}
+@media(max-width:700px){.downloads{max-width:none}}
+</style>
