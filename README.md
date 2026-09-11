@@ -1,14 +1,14 @@
-# firelight
+# <img src="public/assets/wordmark.svg" width="180" height="42" alt="firelight">
 
 A colour palette for interfaces and code, with three variants: Coal, Smoulder, and Ash.
 
 The name comes from the changing colours of fire as it grows and reacts with different substances.
 
-[Palette](https://ridusaini.github.io/firelight/) | [Playground](https://ridusaini.github.io/firelight/playground/) | [Community](https://ridusaini.github.io/firelight/community/)
+Website: [Palette](https://ridusaini.github.io/firelight/) / [Playground](https://ridusaini.github.io/firelight/playground/) / [Community](https://ridusaini.github.io/firelight/community/)
 
 Download: [CSS](./downloads/firelight.css) or [JSON](./downloads/firelight.json)
 
-[Variants](#variants) | [Palette](#palette) | [Suggested uses](#suggested-uses) | [Accessibility](#accessibility)
+In this README: [Variants](#variants) / [Palette](#palette) / [Suggested uses](#suggested-uses) / [Accessibility](#accessibility)
 
 <p align="center">
   <img src="public/assets/overview.svg" width="1180" alt="Coal, Smoulder, and Ash, each with six background colours, six text colours, and ten accents.">
