@@ -1,0 +1,300 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "firelight palette",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "name",
+    "version",
+    "schemaVersion",
+    "description",
+    "colorUnits",
+    "defaultVariant",
+    "variants"
+  ],
+  "properties": {
+    "name": {
+      "const": "firelight"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "schemaVersion": {
+      "const": 2
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "colorUnits": {
+      "type": "string",
+      "minLength": 1
+    },
+    "defaultVariant": {
+      "enum": [
+        "coal",
+        "smoulder",
+        "ash"
+      ]
+    },
+    "variants": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coal",
+        "smoulder",
+        "ash"
+      ],
+      "properties": {
+        "coal": {
+          "$ref": "#/definitions/variant"
+        },
+        "smoulder": {
+          "$ref": "#/definitions/variant"
+        },
+        "ash": {
+          "$ref": "#/definitions/variant"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "color": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "group",
+        "hex",
+        "rgb",
+        "hsl",
+        "oklch",
+        "cssVariable"
+      ],
+      "properties": {
+        "group": {
+          "enum": [
+            "background",
+            "foreground",
+            "accent",
+            "diff"
+          ]
+        },
+        "hex": {
+          "type": "string",
+          "pattern": "^#[0-9A-F]{6}$"
+        },
+        "rgb": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "r",
+            "g",
+            "b"
+          ],
+          "properties": {
+            "r": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            },
+            "g": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            },
+            "b": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 255
+            }
+          }
+        },
+        "hsl": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "h",
+            "s",
+            "l"
+          ],
+          "properties": {
+            "h": {
+              "type": "number",
+              "minimum": 0,
+              "exclusiveMaximum": 360
+            },
+            "s": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "l": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          }
+        },
+        "oklch": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "l",
+            "c",
+            "h"
+          ],
+          "properties": {
+            "l": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1
+            },
+            "c": {
+              "type": "number",
+              "minimum": 0
+            },
+            "h": {
+              "type": "number",
+              "minimum": 0,
+              "exclusiveMaximum": 360
+            }
+          }
+        },
+        "cssVariable": {
+          "type": "string",
+          "pattern": "^--fl-(coal|smoulder|ash)-[a-z0-9-]+$"
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "appearance",
+        "description",
+        "colors"
+      ],
+      "properties": {
+        "appearance": {
+          "enum": [
+            "dark",
+            "light"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "colors": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "bg0",
+            "bg1",
+            "bg2",
+            "bg3",
+            "bg4",
+            "bg5",
+            "fg5",
+            "fg4",
+            "fg3",
+            "fg2",
+            "fg1",
+            "fg0",
+            "rose",
+            "ember",
+            "coral",
+            "apricot",
+            "honey",
+            "fern",
+            "verdigris",
+            "cornflower",
+            "lilac",
+            "orchid",
+            "diff-add",
+            "diff-remove",
+            "diff-modify"
+          ],
+          "properties": {
+            "bg0": {
+              "$ref": "#/definitions/color"
+            },
+            "bg1": {
+              "$ref": "#/definitions/color"
+            },
+            "bg2": {
+              "$ref": "#/definitions/color"
+            },
+            "bg3": {
+              "$ref": "#/definitions/color"
+            },
+            "bg4": {
+              "$ref": "#/definitions/color"
+            },
+            "bg5": {
+              "$ref": "#/definitions/color"
+            },
+            "fg5": {
+              "$ref": "#/definitions/color"
+            },
+            "fg4": {
+              "$ref": "#/definitions/color"
+            },
+            "fg3": {
+              "$ref": "#/definitions/color"
+            },
+            "fg2": {
+              "$ref": "#/definitions/color"
+            },
+            "fg1": {
+              "$ref": "#/definitions/color"
+            },
+            "fg0": {
+              "$ref": "#/definitions/color"
+            },
+            "rose": {
+              "$ref": "#/definitions/color"
+            },
+            "ember": {
+              "$ref": "#/definitions/color"
+            },
+            "coral": {
+              "$ref": "#/definitions/color"
+            },
+            "apricot": {
+              "$ref": "#/definitions/color"
+            },
+            "honey": {
+              "$ref": "#/definitions/color"
+            },
+            "fern": {
+              "$ref": "#/definitions/color"
+            },
+            "verdigris": {
+              "$ref": "#/definitions/color"
+            },
+            "cornflower": {
+              "$ref": "#/definitions/color"
+            },
+            "lilac": {
+              "$ref": "#/definitions/color"
+            },
+            "orchid": {
+              "$ref": "#/definitions/color"
+            },
+            "diff-add": {
+              "$ref": "#/definitions/color"
+            },
+            "diff-remove": {
+              "$ref": "#/definitions/color"
+            },
+            "diff-modify": {
+              "$ref": "#/definitions/color"
+            }
+          }
+        }
+      }
+    }
+  }
+}

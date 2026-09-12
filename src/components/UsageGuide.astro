@@ -1,6 +1,6 @@
 ---
 import palette, { defaultVariant } from '../lib/palette';
-import { suggestedUses } from '../lib/usage';
+import { suggestedUses, usage } from '../lib/usage';
 import { copyInk, cssVariable } from '../lib/colour';
 ---
 <section class="usage" id="usage">
@@ -10,7 +10,7 @@ import { copyInk, cssVariable } from '../lib/colour';
     <table class="rt">
       <thead><tr><th></th><th>Token</th><th>Interface examples</th><th>Code and other examples</th></tr></thead>
       <tbody>{suggestedUses.map(({token, use, example}) => {
-      const hex = palette.variants[defaultVariant].colors[token];
+      const hex = palette.variants[defaultVariant].colors[token].hex;
       const variable = cssVariable(defaultVariant, token);
       return <tr><td class="rsw"><span style={'background:' + hex}></span></td><td class="rn"><button type="button" data-v={variable} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variable}><span>{variable}</span><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td><td class="ru">{use}</td><td class="ru">{example}</td></tr>;
     })}</tbody>
@@ -25,28 +25,28 @@ import { copyInk, cssVariable } from '../lib/colour';
         <article class="spec-card">
           <h4>Syntax</h4>
           <dl>
-            <div><dt>Comments, punctuation</dt><dd><code>bg5</code></dd></div>
-            <div><dt>Text, variables</dt><dd><code>fg1</code></dd></div>
-            <div><dt>Keywords, control</dt><dd><code>orchid</code></dd></div>
-            <div><dt>Functions, properties</dt><dd><code>cornflower</code></dd></div>
-            <div><dt>Strings</dt><dd><code>fern</code></dd></div>
-            <div><dt>Numbers, constants</dt><dd><code>apricot</code></dd></div>
-            <div><dt>Types, classes, attributes</dt><dd><code>honey</code></dd></div>
-            <div><dt>Operators</dt><dd><code>verdigris</code></dd></div>
-            <div><dt>Parameters, tags, deprecated</dt><dd><code>coral</code></dd></div>
-            <div><dt>Regex, escapes</dt><dd><code>rose</code></dd></div>
+            <div><dt>Comments, punctuation</dt><dd><code>{usage.mappings.syntax.comment}</code></dd></div>
+            <div><dt>Text, variables</dt><dd><code>{usage.mappings.syntax.text}</code></dd></div>
+            <div><dt>Keywords, control</dt><dd><code>{usage.mappings.syntax.keyword}</code></dd></div>
+            <div><dt>Functions, properties</dt><dd><code>{usage.mappings.syntax.function}</code></dd></div>
+            <div><dt>Strings</dt><dd><code>{usage.mappings.syntax.string}</code></dd></div>
+            <div><dt>Numbers, constants</dt><dd><code>{usage.mappings.syntax.number}</code></dd></div>
+            <div><dt>Types, classes, attributes</dt><dd><code>{usage.mappings.syntax.type}</code></dd></div>
+            <div><dt>Operators</dt><dd><code>{usage.mappings.syntax.operator}</code></dd></div>
+            <div><dt>Parameters, tags, deprecated</dt><dd><code>{usage.mappings.syntax.parameter}</code></dd></div>
+            <div><dt>Regex, escapes</dt><dd><code>{usage.mappings.syntax.regex}</code></dd></div>
           </dl>
         </article>
         <article class="spec-card">
           <h4>Diagnostics &amp; diffs</h4>
           <dl>
-            <div><dt>Error</dt><dd><code>ember</code></dd></div>
-            <div><dt>Warning</dt><dd><code>honey</code></dd></div>
-            <div><dt>Info, hint</dt><dd><code>verdigris</code></dd></div>
-            <div><dt>Success</dt><dd><code>fern</code></dd></div>
-            <div><dt>Added</dt><dd><code>fern</code> on <code>diff-add</code></dd></div>
-            <div><dt>Removed</dt><dd><code>ember</code> on <code>diff-remove</code></dd></div>
-            <div><dt>Modified</dt><dd><code>orchid</code> on <code>diff-modify</code></dd></div>
+            <div><dt>Error</dt><dd><code>{usage.mappings.diagnostics.error}</code></dd></div>
+            <div><dt>Warning</dt><dd><code>{usage.mappings.diagnostics.warning}</code></dd></div>
+            <div><dt>Info, hint</dt><dd><code>{usage.mappings.diagnostics.info}</code></dd></div>
+            <div><dt>Success</dt><dd><code>{usage.mappings.diagnostics.success}</code></dd></div>
+            <div><dt>Added</dt><dd><code>{usage.mappings.diff.added.foreground}</code> on <code>{usage.mappings.diff.added.background}</code></dd></div>
+            <div><dt>Removed</dt><dd><code>{usage.mappings.diff.removed.foreground}</code> on <code>{usage.mappings.diff.removed.background}</code></dd></div>
+            <div><dt>Modified</dt><dd><code>{usage.mappings.diff.modified.foreground}</code> on <code>{usage.mappings.diff.modified.background}</code></dd></div>
           </dl>
           <div class="diff-preview" aria-label="Example source control diff">
             <div class="diff-line removed"><span aria-hidden="true">−</span><code>timeout: 15,</code></div>
@@ -59,24 +59,24 @@ import { copyInk, cssVariable } from '../lib/colour';
           <h4>Terminal ANSI</h4>
           <div class="terminal-grid">
             <dl>
-              <div><dt>Black</dt><dd><code>bg0</code></dd></div>
-              <div><dt>Red</dt><dd><code>ember</code></dd></div>
-              <div><dt>Green</dt><dd><code>fern</code></dd></div>
-              <div><dt>Yellow</dt><dd><code>honey</code></dd></div>
-              <div><dt>Blue</dt><dd><code>cornflower</code></dd></div>
-              <div><dt>Magenta</dt><dd><code>orchid</code></dd></div>
-              <div><dt>Cyan</dt><dd><code>verdigris</code></dd></div>
-              <div><dt>White</dt><dd><code>fg1</code></dd></div>
+              <div><dt>Black</dt><dd><code>{usage.mappings.terminal.ansi.black}</code></dd></div>
+              <div><dt>Red</dt><dd><code>{usage.mappings.terminal.ansi.red}</code></dd></div>
+              <div><dt>Green</dt><dd><code>{usage.mappings.terminal.ansi.green}</code></dd></div>
+              <div><dt>Yellow</dt><dd><code>{usage.mappings.terminal.ansi.yellow}</code></dd></div>
+              <div><dt>Blue</dt><dd><code>{usage.mappings.terminal.ansi.blue}</code></dd></div>
+              <div><dt>Magenta</dt><dd><code>{usage.mappings.terminal.ansi.magenta}</code></dd></div>
+              <div><dt>Cyan</dt><dd><code>{usage.mappings.terminal.ansi.cyan}</code></dd></div>
+              <div><dt>White</dt><dd><code>{usage.mappings.terminal.ansi.white}</code></dd></div>
             </dl>
             <dl>
-              <div><dt>Bright black</dt><dd><code>bg5</code></dd></div>
-              <div><dt>Bright red</dt><dd><code>coral</code></dd></div>
-              <div><dt>Bright green</dt><dd><code>fern</code></dd></div>
-              <div><dt>Bright yellow</dt><dd><code>apricot</code></dd></div>
-              <div><dt>Bright blue</dt><dd><code>lilac</code></dd></div>
-              <div><dt>Bright magenta</dt><dd><code>rose</code></dd></div>
-              <div><dt>Bright cyan</dt><dd><code>verdigris</code></dd></div>
-              <div><dt>Bright white</dt><dd><code>fg0</code></dd></div>
+              <div><dt>Bright black</dt><dd><code>{usage.mappings.terminal.ansi.brightBlack}</code></dd></div>
+              <div><dt>Bright red</dt><dd><code>{usage.mappings.terminal.ansi.brightRed}</code></dd></div>
+              <div><dt>Bright green</dt><dd><code>{usage.mappings.terminal.ansi.brightGreen}</code></dd></div>
+              <div><dt>Bright yellow</dt><dd><code>{usage.mappings.terminal.ansi.brightYellow}</code></dd></div>
+              <div><dt>Bright blue</dt><dd><code>{usage.mappings.terminal.ansi.brightBlue}</code></dd></div>
+              <div><dt>Bright magenta</dt><dd><code>{usage.mappings.terminal.ansi.brightMagenta}</code></dd></div>
+              <div><dt>Bright cyan</dt><dd><code>{usage.mappings.terminal.ansi.brightCyan}</code></dd></div>
+              <div><dt>Bright white</dt><dd><code>{usage.mappings.terminal.ansi.brightWhite}</code></dd></div>
             </dl>
           </div>
         </article>

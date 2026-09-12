@@ -1,7 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 348" role="img" aria-labelledby="title desc">
   <title id="title">Firelight palettes: Coal, Smoulder, and Ash</title>
   <desc id="desc">Each variant shows six background colours, six text colours, and ten accents on bg1.</desc>
-  <rect width="1180" height="348" fill="#1B1A19"/>
 
   <g transform="translate(28 28)" font-family="ui-monospace, monospace" data-variant="coal">
     <rect width="360" height="292" rx="5" fill="#232222" stroke="#484746"/>

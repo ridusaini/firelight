@@ -1,0 +1,208 @@
+{
+  "examples": [
+    {
+      "token": "bg0",
+      "use": "Inset surfaces",
+      "example": "Code blocks and terminal panes."
+    },
+    {
+      "token": "bg1",
+      "use": "Page background",
+      "example": "Editor and terminal backgrounds."
+    },
+    {
+      "token": "bg2",
+      "use": "Cards and controls",
+      "example": "Active lines and selected rows."
+    },
+    {
+      "token": "bg3",
+      "use": "Borders and dividers",
+      "example": "Split separators and guides."
+    },
+    {
+      "token": "bg4",
+      "use": "Inactive fills",
+      "example": "Line numbers, gutters, and whitespace marks."
+    },
+    {
+      "token": "bg5",
+      "use": "Subtle controls",
+      "example": "Comments, delimiters, and punctuation."
+    },
+    {
+      "token": "fg5",
+      "use": "Muted text",
+      "example": "Low-priority annotations."
+    },
+    {
+      "token": "fg4",
+      "use": "Labels and captions",
+      "example": "Status text and annotations."
+    },
+    {
+      "token": "fg3",
+      "use": "Supporting text",
+      "example": "Less prominent editor text."
+    },
+    {
+      "token": "fg2",
+      "use": "Secondary text",
+      "example": "Secondary editor text."
+    },
+    {
+      "token": "fg1",
+      "use": "Body text",
+      "example": "Text, variables, and terminal foreground."
+    },
+    {
+      "token": "fg0",
+      "use": "Headings",
+      "example": "Bright terminal white and emphasized results."
+    },
+    {
+      "token": "rose",
+      "use": "Accent and cursor",
+      "example": "Regex and escape sequences."
+    },
+    {
+      "token": "ember",
+      "use": "Errors",
+      "example": "Diagnostics and deleted content."
+    },
+    {
+      "token": "coral",
+      "use": "Secondary accent",
+      "example": "Parameters, markup tags, and deprecated symbols."
+    },
+    {
+      "token": "apricot",
+      "use": "Warm highlights",
+      "example": "Numbers and constants."
+    },
+    {
+      "token": "honey",
+      "use": "Warnings",
+      "example": "Types, classes, and attributes."
+    },
+    {
+      "token": "fern",
+      "use": "Success",
+      "example": "Strings and added content."
+    },
+    {
+      "token": "verdigris",
+      "use": "Info and hints",
+      "example": "Operators and hints."
+    },
+    {
+      "token": "cornflower",
+      "use": "Links",
+      "example": "Functions, methods, and properties."
+    },
+    {
+      "token": "lilac",
+      "use": "Focus and selection",
+      "example": "Matching brackets and marks. Selection can use a low-opacity tint."
+    },
+    {
+      "token": "orchid",
+      "use": "Alternate accent",
+      "example": "Keywords and control flow."
+    }
+  ],
+  "mappings": {
+    "interface": {
+      "bg-code": "bg0",
+      "bg": "bg1",
+      "bg-raised": "bg2",
+      "border": "bg3",
+      "fg-gutter": "bg4",
+      "fg-comment": "bg5",
+      "fg-muted": "fg5",
+      "fg-label": "fg4",
+      "fg": "fg1",
+      "fg-display": "fg0",
+      "cursor": "rose",
+      "danger": "ember",
+      "accent": "rose",
+      "warning": "honey",
+      "success": "fern",
+      "info": "verdigris",
+      "link": "cornflower",
+      "focus": "lilac",
+      "link-visited": "orchid"
+    },
+    "syntax": {
+      "comment": "bg5",
+      "punctuation": "bg5",
+      "text": "fg1",
+      "variable": "fg1",
+      "keyword": "orchid",
+      "control": "orchid",
+      "function": "cornflower",
+      "method": "cornflower",
+      "property": "cornflower",
+      "string": "fern",
+      "number": "apricot",
+      "constant": "apricot",
+      "type": "honey",
+      "class": "honey",
+      "attribute": "honey",
+      "operator": "verdigris",
+      "parameter": "coral",
+      "tag": "coral",
+      "deprecated": "coral",
+      "regex": "rose",
+      "escape": "rose"
+    },
+    "diagnostics": {
+      "error": "ember",
+      "warning": "honey",
+      "info": "verdigris",
+      "hint": "verdigris",
+      "success": "fern"
+    },
+    "diff": {
+      "added": {
+        "foreground": "fern",
+        "background": "diff-add"
+      },
+      "removed": {
+        "foreground": "ember",
+        "background": "diff-remove"
+      },
+      "modified": {
+        "foreground": "orchid",
+        "background": "diff-modify"
+      }
+    },
+    "terminal": {
+      "foreground": "fg1",
+      "background": "bg1",
+      "cursor": "rose",
+      "selection": {
+        "token": "lilac",
+        "alpha": 0.12
+      },
+      "ansi": {
+        "black": "bg0",
+        "red": "ember",
+        "green": "fern",
+        "yellow": "honey",
+        "blue": "cornflower",
+        "magenta": "orchid",
+        "cyan": "verdigris",
+        "white": "fg1",
+        "brightBlack": "bg5",
+        "brightRed": "coral",
+        "brightGreen": "fern",
+        "brightYellow": "apricot",
+        "brightBlue": "lilac",
+        "brightMagenta": "rose",
+        "brightCyan": "verdigris",
+        "brightWhite": "fg0"
+      }
+    }
+  }
+}

@@ -5,11 +5,13 @@ import Downloads from '../components/Downloads.astro';
 import PaletteOverview from '../components/PaletteOverview.astro';
 import PaletteReference from '../components/PaletteReference.astro';
 import UsageGuide from '../components/UsageGuide.astro';
+import HomeHero from '../components/HomeHero.astro';
 import { sitePath } from '../lib/paths';
 ---
-<SiteLayout title="firelight | Palette" description="A colour palette for interfaces and code, with three variants: Coal, Smoulder, and Ash." current="palette">
+<SiteLayout title="firelight | Palette" description="A colour palette for interfaces and code, with three variants: Coal, Smoulder, and Ash." current="palette" revealBrandAfter="home-title">
   <Icons />
-  <section class="wrap palette-intro" aria-labelledby="palette-heading"><div><h1 id="palette-heading">Coal, Smoulder, and Ash.</h1><p>A colour palette for interfaces and code.</p></div><Downloads /></section>
+  <HomeHero />
+  <section class="wrap palette-intro" id="palettes" aria-labelledby="palette-heading"><div><h2 id="palette-heading">Coal, Smoulder, and Ash.</h2></div><Downloads /></section>
   <PaletteOverview />
   <nav class="reference-nav wrap" aria-label="Palette sections"><a href="#coal">Coal</a><a href="#smoulder">Smoulder</a><a href="#ash">Ash</a><a href="#usage">Suggested uses</a><a href="#using-firelight">Accessibility</a></nav>
   <PaletteReference />

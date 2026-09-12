@@ -4,15 +4,15 @@ A colour palette for interfaces and code, with three variants: Coal, Smoulder, a
 
 The name comes from the changing colours of fire as it grows and reacts with different substances.
 
-Website: [Palette](https://ridusaini.github.io/firelight/) / [Playground](https://ridusaini.github.io/firelight/playground/) / [Community](https://ridusaini.github.io/firelight/community/)
-
 Download: [CSS](./downloads/firelight.css) or [JSON](./downloads/firelight.json)
+
+Website: [Palette](https://ridusaini.github.io/firelight/) / [Playground](https://ridusaini.github.io/firelight/playground/) / [Community](https://ridusaini.github.io/firelight/community/)
 
 In this README: [Variants](#variants) / [Palette](#palette) / [Suggested uses](#suggested-uses) / [Accessibility](#accessibility)
 
-<p align="center">
-  <img src="public/assets/overview.svg" width="1180" alt="Coal, Smoulder, and Ash, each with six background colours, six text colours, and ten accents.">
-</p>
+
+<img src="public/assets/overview.svg" width="1180" alt="Coal, Smoulder, and Ash, each with six background colours, six text colours, and ten accents.">
+
 
 ## Variants
 
@@ -32,7 +32,7 @@ Background colours run from `bg0` to `bg5`, and text colours from `fg5` to `fg0`
 
 The examples use `bg1` for backgrounds and `fg1` for body text. Any of the `fg` shades can be used for text.
 
-CSS names include the variant, like `--fl-ash-bg1` and `--fl-coal-rose`. All three palettes are available together. The JSON groups colours by variant and includes their full CSS names.
+CSS names include the variant, like `--fl-ash-bg1` and `--fl-coal-rose`. The JSON keeps each colour’s hex, RGB, HSL, OKLCH, and CSS names at one place.
 
 ## Palette
 

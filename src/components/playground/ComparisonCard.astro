@@ -4,7 +4,9 @@ import { contrastRatio, copyInk } from '../../lib/colour';
 interface Props { variant: Variant }
 const { variant } = Astro.props;
 const name = variantNames[variant];
-const { bg1: background, rose: foreground } = palette.variants[variant].colors;
+const colors = palette.variants[variant].colors;
+const background = colors.bg1.hex;
+const foreground = colors.rose.hex;
 ---
 <article class="comparison-card" data-fl={variant} data-comparison-variant={variant}>
   <header><strong>{name}</strong><code><span data-comparison-background-token>bg1</span> / <span data-comparison-foreground-token>rose</span></code></header>

@@ -6,7 +6,7 @@ import { copy } from '../src/scripts/clipboard';
 import postcss from 'postcss';
 
 for(const [variant,data] of Object.entries(palette.variants)) {
-  const values: Record<string,string>={...data.colors,...data.surfaces};
+  const values = Object.fromEntries(Object.entries(data.colors).map(([token, color]) => [token, color.hex]));
   test(variant+' export contains all 25 exact names and values',()=>{
     const css=variantCss(variant,values);assert(css);
     const declarations: Record<string,string>={};

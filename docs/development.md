@@ -20,7 +20,9 @@ Start the development server:
 npm run dev
 ```
 
-Development URL: [http://localhost:4321/firelight/](http://localhost:4321/firelight/).
+Development URL: [http://localhost:4321/](http://localhost:4321/).
+
+Development commands use `--base /`. Builds and production preview keep `/firelight/` from `astro.config.mjs` to match GitHub Pages.
 
 Override the port with `npm run dev -- --port 4322`.
 
@@ -35,7 +37,7 @@ Override the port with `npm run dev -- --port 4322`.
 | [src/scripts](../src/scripts/) | Clipboard and Playground interactions |
 | [src/lib](../src/lib/) | Palette utilities, colour calculations, and directory validation |
 | [downloads](../downloads/) | Palette CSS and JSON |
-| [resources](../resources/) | Community data, schema, and sample file |
+| [resources](../resources/) | Palette schema, website guidance, and community data |
 | [public/assets](../public/assets/) | Images, icons, and fonts |
 | [test](../test/) | Automated tests |
 
@@ -57,14 +59,4 @@ npm run check
 npm test
 ```
 
-Running `npm test` builds the site first, then checks palette data, community submissions, and published files. Empty and populated community directories are also built in temporary folders. For production preview, stop the development server and run `npm run preview`. Verify layout changes at desktop and mobile widths, including keyboard navigation and focus states.
-
-## Palette changes
-
-Keep the CSS, JSON values, and JSON metadata in [downloads](../downloads/) consistent with the [README](../README.md) and [overview image](../public/assets/overview.svg). Palette tables and comparison cards are generated from JSON.
-
-Preserve the public download URLs: `/firelight/firelight.css` and `/firelight/firelight.json`.
-
-## Build and deployment
-
-Generated output and dependencies in `dist/`, `.astro/`, and `node_modules/` are excluded from version control.
+Running `npm test` builds the site first, then checks palette data, community submissions, and downloadable files. Empty and populated community directories are also built in temporary folders. For production preview, stop the development server and run `npm run preview`, then open [http://localhost:4321/firelight/](http://localhost:4321/firelight/).

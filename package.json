@@ -7,8 +7,8 @@
     "node": ">=24 <27"
   },
   "scripts": {
-    "dev": "astro dev",
-    "dev:samples": "astro dev --mode samples",
+    "dev": "astro dev --base /",
+    "dev:samples": "astro dev --base / --mode samples",
     "check": "astro check",
     "pretest": "npm run build",
     "test": "tsx --test test/*.test.ts",
