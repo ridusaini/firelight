@@ -35,4 +35,4 @@ Open an [issue](https://github.com/ridusaini/firelight/issues) or pull request w
 
 ## Website contributions
 
-See [Development](docs/development.md) for setup and validation commands. A short description and any checks performed help with review. Screenshots are useful for layout changes. For substantial changes or palette adjustments, an issue is a good place to start the discussion.
+See [Development](docs/development.md) for setup and validation commands. A short description will help with review. Screenshots are useful for layout changes. For substantial website changes, an issue is a good place to start the discussion.

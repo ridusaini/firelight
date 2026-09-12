@@ -1,22 +1,31 @@
 ---
 import Wordmark from './Wordmark.astro';
 import { sitePath } from '../lib/paths';
-interface Props { current: 'palette' | 'playground' | 'community' }
-const { current } = Astro.props;
+interface Props { current: 'palette' | 'playground' | 'community'; revealBrandAfter?: string }
+const { current, revealBrandAfter } = Astro.props;
 const pages = [{ id: 'palette', label: 'Palette', path: '' }, { id: 'playground', label: 'Playground', path: 'playground/' }, { id: 'community', label: 'Community', path: 'community/' }];
 ---
-<header class="site-header wrap">
+<header class="site-header" data-reveal-brand-after={revealBrandAfter}>
+  <div class="header-inner wrap">
   <a class="brand-link" href={sitePath()} aria-label="firelight palette"><Wordmark /></a>
   <nav class="site-nav" aria-label="Main navigation">
     {pages.map(page => <a href={sitePath(page.path)} aria-current={current === page.id ? 'page' : undefined}>{page.label}</a>)}
   </nav>
+  </div>
 </header>
 
+<script>
+  import '../scripts/header';
+</script>
+
 <style>
-.site-header{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:28px;padding-bottom:40px}
-.brand-link{text-decoration:none;flex:none}.site-nav{display:flex;flex-wrap:wrap;gap:24px}
+.site-header{position:sticky;top:0;z-index:20;background:var(--pg)}
+.header-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:var(--header-height);padding-top:12px;padding-bottom:12px}
+.brand-link{text-decoration:none;flex:none;transition:opacity .2s}
+.site-header[data-brand-visible="false"] .brand-link{visibility:hidden;opacity:0}
+.site-nav{display:flex;flex-wrap:wrap;gap:24px}
 .site-nav a{font-size:12px;text-decoration:none;color:var(--ink-2);padding:8px 0}
 .site-nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-underline-offset:6px}
 .site-nav a:hover{color:var(--site-rose)}
-@media(max-width:600px){.site-header{align-items:flex-start;flex-direction:column;gap:14px;padding-top:24px;padding-bottom:28px}.site-nav{gap:24px}}
+@media(max-width:600px){.header-inner{align-items:flex-start;flex-direction:column;justify-content:center;gap:8px}.site-nav{gap:24px}}
 </style>

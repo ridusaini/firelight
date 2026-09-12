@@ -92,7 +92,8 @@
 }
 *{box-sizing:border-box}
 [hidden]{display:none!important}
-html{scroll-behavior:smooth}
+html{--header-height:64px;scroll-behavior:smooth;scroll-padding-top:calc(var(--header-height) + 16px)}
+@media(max-width:600px){html{--header-height:104px}}
 .skip-link{position:fixed;top:10px;left:10px;z-index:30;padding:10px 14px;
   background:var(--pg);color:var(--hi);transform:translateY(-200%)}
 .skip-link:focus{transform:translateY(0);outline:2px solid var(--hi);outline-offset:2px}
@@ -114,7 +115,6 @@ body{margin:0;background:var(--pg);color:var(--ink);font:14.5px/1.6 var(--mono);
 .playground{--demo-accent:var(--site-rose);--demo-hover:color-mix(in srgb,var(--site-bg2) 72%,transparent);
   --demo-control:color-mix(in srgb,var(--site-bg2) 40%,transparent)}
 .playground>.section-panel{padding:28px;background:var(--site-bg1);transition:background .16s,color .16s}
-.playground,.comparison,.palette-reference{scroll-margin-top:46px}
 .play-head{margin-bottom:32px}
 .play-head h2,.palette-head h2,.showcase h2{margin:0 0 11px;font-size:clamp(21px,2.9vw,28px);
   line-height:1.15;letter-spacing:-.025em}
@@ -306,7 +306,6 @@ body{margin:0;background:var(--pg);color:var(--ink);font:14.5px/1.6 var(--mono);
 .variant-panel{padding:32px;border:1px solid var(--site-bg3);border-radius:4px;
   background:var(--site-bg1);color:var(--site-fg1)}
 
-.v,.usage,.guide{scroll-margin-top:46px}
 .v h3{font-size:clamp(21px,2.9vw,28px);line-height:1;letter-spacing:-.02em;font-weight:700;
   margin:0 0 11px;color:var(--site-fg0)}
 .vd{max-width:62ch;margin:0 0 28px;color:var(--site-fg4);font-size:14px;line-height:1.6}
@@ -464,7 +463,8 @@ h1{font-size:clamp(22px,3vw,30px);line-height:1.3;margin:0 0 14px;font-weight:70
 .reference-nav{display:flex;gap:22px;overflow-x:auto;padding-top:12px;padding-bottom:12px}
 .reference-nav a{flex:none;color:var(--ink-2);font-size:12px;text-decoration:none}
 .reference-nav a:hover{color:var(--ink)}
-.palette-intro{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start;padding-top:12px;padding-bottom:32px}
+.palette-intro{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start;padding-top:72px;padding-bottom:32px}
+.palette-intro h2{font-size:clamp(22px,3vw,30px);line-height:1.3;margin:0 0 14px;font-weight:700;color:var(--ink)}
 .palette-intro p{margin:0;color:var(--ink-2);font-size:13px}
 .community-heading-row{display:flex;justify-content:space-between;align-items:center;gap:24px}
 .community-share{font-size:12px;color:var(--site-rose);text-underline-offset:4px;white-space:nowrap}

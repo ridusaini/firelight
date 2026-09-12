@@ -42,21 +42,19 @@ test('published downloads match their sources',()=>{
 test('production publishes the real directory without the sample file',()=>{
   assert.deepEqual(JSON.parse(read('dist/community.json')),JSON.parse(read('resources/community.json')));
   assert(!files.has('resources/community.samples.json'));
+  for(const file of ['suggested-uses.json','resources/suggested-uses.json'])assert(!files.has(file));
 });
-test('all 75 palette values match CSS and JSON', () => {
+test('CSS and JSON contain the same tokens and values', () => {
   const values = new Map<string,string>();
   postcss.parse(read('downloads/firelight.css')).walkDecls(decl => { values.set(decl.prop, decl.value.toUpperCase()); });
-  assert.equal(values.size, 75);
   let checked = 0;
   for (const [variant, data] of Object.entries(palette.variants)) {
-    for (const [group, metadata] of [['colors', 'metadata'], ['surfaces', 'surfaceMetadata']] as const) {
-      for (const [token, hex] of Object.entries(data[group])) {
-        const variable = '--fl-' + variant + '-' + token;
-        assert.equal((data[metadata] as Record<string,{cssVariable:string}>)[token].cssVariable, variable);
-        assert.equal(values.get(variable), hex.toUpperCase(), variable);
-        checked++;
-      }
+    for (const [token, color] of Object.entries(data.colors)) {
+      const variable = '--fl-' + variant + '-' + token;
+      assert.equal(color.cssVariable, variable);
+      assert.equal(values.get(variable), color.hex, variable);
+      checked++;
     }
   }
-  assert.equal(checked, 75);
+  assert.equal(values.size, checked);
 });

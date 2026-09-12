@@ -4,8 +4,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { sitePath } from '../lib/paths';
 import '../styles/global.css';
-interface Props { title: string; description: string; current: 'palette' | 'playground' | 'community' }
-const { title, description, current } = Astro.props;
+interface Props { title: string; description: string; current: 'palette' | 'playground' | 'community'; revealBrandAfter?: string }
+const { title, description, current, revealBrandAfter } = Astro.props;
 ---
 <!doctype html>
 <html lang="en" data-fl={siteVariant}>
@@ -13,7 +13,7 @@ const { title, description, current } = Astro.props;
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
-  <meta name="theme-color" content={palette.variants[siteVariant].colors.bg1} />
+  <meta name="theme-color" content={palette.variants[siteVariant].colors.bg1.hex} />
   <meta name="color-scheme" content="dark" />
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
@@ -24,7 +24,7 @@ const { title, description, current } = Astro.props;
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <Header current={current} />
+  <Header current={current} revealBrandAfter={revealBrandAfter} />
   <main id="main" tabindex="-1"><slot /></main>
   <Footer community={current === 'community'} />
   <div id="toast" role="status" aria-live="polite"></div>
