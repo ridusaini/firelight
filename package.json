@@ -16,14 +16,14 @@
     "preview": "astro preview"
   },
   "devDependencies": {
+    "@astrojs/check": "0.9.10",
+    "@types/node": "22.20.2",
     "ajv": "8.20.0",
     "ajv-formats": "3.0.1",
     "parse5": "8.0.1",
     "postcss": "8.5.28",
-    "@astrojs/check": "0.9.10",
-    "typescript": "5.9.3",
     "tsx": "4.23.13",
-    "@types/node": "22.20.2"
+    "typescript": "5.9.3"
   },
   "dependencies": {
     "astro": "7.3.2"

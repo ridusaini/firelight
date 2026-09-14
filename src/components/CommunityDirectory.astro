@@ -26,7 +26,7 @@ const groups = communityGroups(validateCommunity(data));
 
 <style>
 .community-group + .community-group{margin-top:48px}
-.community-group h2,.community-empty h2{margin:0 0 20px;font-size:18px;color:var(--ink)}
+.community-group h2,.community-empty h2{margin:0 0 20px;font-size:18px;color:var(--site-fg1)}
 .community-list{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;list-style:none;margin:0;padding:0}
 .community-entry{min-width:0;padding:20px 24px;border:1px solid var(--site-bg3);border-radius:4px;background:var(--site-bg2);overflow-wrap:anywhere;transition:background .14s}
 .community-entry:hover,.community-entry:focus-within{background:color-mix(in srgb,var(--site-bg2) 70%,var(--site-bg3))}
@@ -36,9 +36,9 @@ const groups = communityGroups(validateCommunity(data));
 .community-entry a:focus-visible{outline:2px solid var(--site-rose);outline-offset:4px}
 .community-entry .community-title{color:var(--site-fg0)}
 .community-entry .community-title:hover,.community-entry .community-title:focus-visible{color:var(--site-fg0)}
-.external-mark{display:inline-block;margin-left:8px;font-size:13px;color:var(--ink-3)}
+.external-mark{display:inline-block;margin-left:8px;font-size:13px;color:var(--site-fg5)}
 .community-meta{margin:0;color:var(--site-fg3);font-size:11px;line-height:1.6}
-.community-description,.community-empty p{max-width:82ch;margin:12px 0 0;color:var(--ink);font-size:12px;line-height:1.7}
+.community-description,.community-empty p{max-width:82ch;margin:12px 0 0;color:var(--site-fg1);font-size:12px;line-height:1.7}
 .community-note{max-width:90ch;margin:8px 0 0;color:var(--site-fg3);font-size:11px;line-height:1.7}
 .community-entry-details{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;margin-top:16px}
 .community-context{flex:1 1 240px}

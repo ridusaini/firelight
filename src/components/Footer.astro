@@ -3,8 +3,8 @@ import { sitePath } from '../lib/paths';
 interface Props { community?: boolean }
 const { community = false } = Astro.props;
 ---
-<footer class="foot"><div class="wrap">
-  {community && <p>Community projects are hosted and maintained by their creators. Installation, releases, and support are available through each project.</p>}
+<footer class="site-footer"><div class="wrap">
+  {community && <p>Community projects are hosted and maintained by their creators.</p>}
   <p><a href={sitePath()}>Palette and downloads</a> <a href="https://github.com/ridusaini/firelight" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-  <p>MIT licensed. Space Mono is included under the SIL Open Font License 1.1.</p>
+  <p>MIT licensed.</p>
 </div></footer>

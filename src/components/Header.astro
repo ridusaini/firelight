@@ -19,13 +19,13 @@ const pages = [{ id: 'palette', label: 'Palette', path: '' }, { id: 'playground'
 </script>
 
 <style>
-.site-header{position:sticky;top:0;z-index:20;background:var(--pg)}
+.site-header{position:sticky;top:0;z-index:20;background:var(--site-bg1)}
 .header-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:var(--header-height);padding-top:12px;padding-bottom:12px}
 .brand-link{text-decoration:none;flex:none;transition:opacity .2s}
-.site-header[data-brand-visible="false"] .brand-link{visibility:hidden;opacity:0}
+.site-header[data-reveal-brand-after]:not([data-brand-visible="true"]) .brand-link{visibility:hidden;opacity:0}
 .site-nav{display:flex;flex-wrap:wrap;gap:24px}
-.site-nav a{font-size:12px;text-decoration:none;color:var(--ink-2);padding:8px 0}
-.site-nav a[aria-current="page"]{color:var(--ink);text-decoration:underline;text-underline-offset:6px}
+.site-nav a{font-size:12px;text-decoration:none;color:var(--site-fg4);padding:8px 0}
+.site-nav a[aria-current="page"]{color:var(--site-fg1);text-decoration:underline;text-underline-offset:6px}
 .site-nav a:hover{color:var(--site-rose)}
 @media(max-width:600px){.header-inner{align-items:flex-start;flex-direction:column;justify-content:center;gap:8px}.site-nav{gap:24px}}
 </style>

@@ -13,6 +13,8 @@ const { title, description, current, revealBrandAfter } = Astro.props;
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={description} />
+  <link rel="preload" as="font" type="font/woff2" href={sitePath('assets/fonts/space-mono-bold.woff2')} crossorigin />
+  <link rel="preload" as="font" type="font/woff2" href={sitePath('assets/fonts/space-mono-regular.woff2')} crossorigin />
   <meta name="theme-color" content={palette.variants[siteVariant].colors.bg1.hex} />
   <meta name="color-scheme" content="dark" />
   <meta property="og:title" content={title} />
