@@ -1,10 +1,13 @@
 ---
-import { cssVariable } from '../lib/colour';
-const accents = ['rose', 'ember', 'coral', 'apricot', 'honey', 'fern', 'verdigris', 'cornflower', 'lilac'];
+import { accentTokens, cssVariable } from '../lib/colour';
+import { variants } from '../lib/palette';
+/* One accent per letter, each letter carries all three variants' colours and
+   the keyframes below cycle between them. */
+const letters = [...'firelight'].map((letter, index) => ({ letter, accent: accentTokens[index] }));
 ---
 <section class="home-hero" aria-labelledby="home-title">
   <div class="hero-centre wrap">
-    <h1 id="home-title" class="hero-wordmark" aria-label="firelight">{[...'firelight'].map((letter, index) => <span aria-hidden="true" style={['coal', 'smoulder', 'ash'].map(variant => '--letter-' + variant + ':var(' + cssVariable(variant, accents[index]) + ')').join(';')}>{letter}</span>)}</h1>
+    <h1 id="home-title" class="hero-wordmark" aria-label="firelight">{letters.map(({ letter, accent }) => <span aria-hidden="true" style={variants.map(variant => '--letter-' + variant + ':var(' + cssVariable(variant, accent) + ')').join(';')}>{letter}</span>)}</h1>
     <p>A colour palette for interfaces and code.</p>
   </div>
   <div class="hero-bottom wrap">

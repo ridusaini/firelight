@@ -1,66 +1,48 @@
 ---
 import { variants } from '../../lib/palette';
+import { accentTokens, backgroundTokens, foregroundTokens } from '../../lib/colour';
 import ComparisonCard from './ComparisonCard.astro';
 ---
-    <section class="comparison" id="compare" data-comparison-mode="colour" aria-labelledby="comparison-title">
-      <div class="comparison-head">
-        <h3 id="comparison-title">Compare variants</h3>
-        <p>Try a background and a colour together in all three variants. You can add your own text too.</p>
-      </div>
+<section class="comparison" id="compare" data-comparison-mode="colour" aria-labelledby="comparison-title">
+  <div class="comparison-head">
+    <h3 id="comparison-title">Compare variants</h3>
+    <p>Try a background and a colour together in all three variants. You can add your own text too.</p>
+  </div>
 
-      <div class="comparison-controls">
-        <div class="comparison-field">
-          <span>Preview</span>
-          <div class="comparison-mode" role="group" aria-label="Comparison preview">
-            <button type="button" data-comparison-mode="colour" aria-pressed="true">Colour</button>
-            <button type="button" data-comparison-mode="text" aria-pressed="false">Text</button>
-          </div>
-        </div>
-        <label class="comparison-field" for="comparison-background">
-          <span>Background</span>
-          <select id="comparison-background">
-            <option value="bg0">bg0</option>
-            <option value="bg1" selected>bg1</option>
-            <option value="bg2">bg2</option>
-            <option value="bg3">bg3</option>
-            <option value="bg4">bg4</option>
-            <option value="bg5">bg5</option>
-          </select>
-        </label>
-        <label class="comparison-field" for="comparison-foreground">
-          <span>Foreground</span>
-          <select id="comparison-foreground">
-            <optgroup label="Foregrounds">
-              <option value="fg5">fg5</option>
-              <option value="fg4">fg4</option>
-              <option value="fg3">fg3</option>
-              <option value="fg2">fg2</option>
-              <option value="fg1">fg1</option>
-              <option value="fg0">fg0</option>
-            </optgroup>
-            <optgroup label="Accents">
-              <option value="rose" selected>rose</option>
-              <option value="ember">ember</option>
-              <option value="coral">coral</option>
-              <option value="apricot">apricot</option>
-              <option value="honey">honey</option>
-              <option value="fern">fern</option>
-              <option value="verdigris">verdigris</option>
-              <option value="cornflower">cornflower</option>
-              <option value="lilac">lilac</option>
-              <option value="orchid">orchid</option>
-            </optgroup>
-          </select>
-        </label>
-        <label class="comparison-field comparison-text-field" for="comparison-text">
-          <span>Text</span>
-          <input id="comparison-text" type="text" value="Hello, world." disabled>
-        </label>
-        <label class="comparison-field comparison-opacity-field" for="comparison-opacity">
-          <span>Foreground opacity <output id="comparison-opacity-value" for="comparison-opacity">100%</output></span>
-          <input id="comparison-opacity" type="range" min="0" max="100" step="1" value="100">
-        </label>
+  <div class="comparison-controls">
+    <div class="comparison-field">
+      <span>Preview</span>
+      <div class="comparison-mode" role="group" aria-label="Comparison preview">
+        <button type="button" data-comparison-mode="colour" aria-pressed="true">Colour</button>
+        <button type="button" data-comparison-mode="text" aria-pressed="false">Text</button>
       </div>
+    </div>
+    <label class="comparison-field" for="comparison-background">
+      <span>Background</span>
+      <select id="comparison-background">
+        {backgroundTokens.map(token => <option value={token} selected={token === 'bg1'}>{token}</option>)}
+      </select>
+    </label>
+    <label class="comparison-field" for="comparison-foreground">
+      <span>Foreground</span>
+      <select id="comparison-foreground">
+        <optgroup label="Foregrounds">
+          {foregroundTokens.map(token => <option value={token}>{token}</option>)}
+        </optgroup>
+        <optgroup label="Accents">
+          {accentTokens.map(token => <option value={token} selected={token === 'rose'}>{token}</option>)}
+        </optgroup>
+      </select>
+    </label>
+    <label class="comparison-field" for="comparison-text">
+      <span>Text</span>
+      <input id="comparison-text" type="text" value="Hello, world." disabled>
+    </label>
+    <label class="comparison-field comparison-opacity-field" for="comparison-opacity">
+      <span>Foreground opacity <output id="comparison-opacity-value" for="comparison-opacity">100%</output></span>
+      <input id="comparison-opacity" type="range" min="0" max="100" step="1" value="100">
+    </label>
+  </div>
 
-      <div class="comparison-grid">{variants.map(variant => <ComparisonCard variant={variant} />)}</div>
-    </section>
+  <div class="comparison-grid">{variants.map(variant => <ComparisonCard variant={variant} />)}</div>
+</section>

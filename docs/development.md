@@ -22,9 +22,19 @@ npm run dev
 
 Development URL: [http://localhost:4321/](http://localhost:4321/).
 
+For production preview, stop or override the development server and run:
+
+```sh
+npm run preview
+```
+
+Preview URL: [http://localhost:4321/firelight/](http://localhost:4321/firelight/).
+
+You can override the port with `npm run dev -- --port 4322`.
+
 Development commands use `--base /`. Builds and production preview keep `/firelight/` from `astro.config.mjs` to match GitHub Pages.
 
-Override the port with `npm run dev -- --port 4322`.
+So basically, all dev environments use direct URL: [http://localhost:4321/](http://localhost:4321/), while production or preview needs a `/firelight` after base URL: [http://localhost:4321/firelight](http://localhost:4321/firelight).
 
 ## Project structure
 
@@ -59,4 +69,21 @@ npm run check
 npm test
 ```
 
-Running `npm test` builds the site first, then checks palette data, community submissions, and downloadable files. Empty and populated community directories are also built in temporary folders. For production preview, stop the development server and run `npm run preview`, then open [http://localhost:4321/firelight/](http://localhost:4321/firelight/).
+`npm test` builds the site first, then runs everything in [test](../test/). It checks four things:
+
+- The palette in [downloads](../downloads/) against its schema, and the hex, RGB, HSL, and OKLCH values against each other.
+- The colour helpers in [src/lib/colour.ts](../src/lib/colour.ts).
+- The community directory against its schema and the submission rules.
+- The built site in `dist/`: every local link points at a file that was actually published, the downloads match their sources, and no sample data made it into production.
+
+The last group is why the build runs first. If a test mentions `dist/`, it is reading the real build output, so a stale build gives you a stale result.
+
+## Build
+
+Simple, just run:
+
+```shell
+npm run build
+```
+
+`npm test` already does this, so you only need it on its own before `npm run preview`. If both pass, you can open a pull request. 

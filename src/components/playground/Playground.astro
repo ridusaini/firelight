@@ -1,5 +1,6 @@
 ---
 import { defaultVariant, variants, variantNames } from '../../lib/palette';
+import { accentTokens, tokenLabel } from '../../lib/colour';
 import InterfacePreview from './InterfacePreview.astro';
 import IdePreview from './IdePreview.astro';
 import TerminalPreview from './TerminalPreview.astro';
@@ -17,19 +18,10 @@ import Comparison from './Comparison.astro';
             {variants.map(variant => <button type="button" data-demo-variant={variant} aria-pressed={variant === defaultVariant}>{variantNames[variant]}</button>)}
           </div>
         </div>
-        <div class="control-group accent-control">
-          <span>Accent: <output id="accent-name">Rose</output></span>
+        <div class="control-group">
+          <span>Accent: <output id="accent-name">{tokenLabel(accentTokens[0])}</output></span>
           <div class="accent-switch" role="group" aria-label="Interface accent">
-            <button type="button" data-demo-accent="rose" aria-label="Rose" title="Rose" aria-pressed="true"></button>
-            <button type="button" data-demo-accent="ember" aria-label="Ember" title="Ember" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="coral" aria-label="Coral" title="Coral" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="apricot" aria-label="Apricot" title="Apricot" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="honey" aria-label="Honey" title="Honey" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="fern" aria-label="Fern" title="Fern" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="verdigris" aria-label="Verdigris" title="Verdigris" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="cornflower" aria-label="Cornflower" title="Cornflower" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="lilac" aria-label="Lilac" title="Lilac" aria-pressed="false"></button>
-            <button type="button" data-demo-accent="orchid" aria-label="Orchid" title="Orchid" aria-pressed="false"></button>
+            {accentTokens.map(accent => <button type="button" data-demo-accent={accent} aria-label={tokenLabel(accent)} title={tokenLabel(accent)} aria-pressed={accent === accentTokens[0]}></button>)}
           </div>
         </div>
       </div>

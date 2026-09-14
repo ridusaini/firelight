@@ -6,20 +6,19 @@ import { copyInk, cssVariable } from '../lib/colour';
 <section class="usage" id="usage">
   <div class="section-panel">
     <h2>Suggested uses</h2>
-    <p class="vd">Some examples for interfaces, code, and terminals.</p>
-    <table class="rt">
+    <p class="section-lede">Some examples for interfaces, code, and terminals.</p>
+    <table class="usage-table">
       <thead><tr><th></th><th>Token</th><th>Interface examples</th><th>Code and other examples</th></tr></thead>
       <tbody>{suggestedUses.map(({token, use, example}) => {
       const hex = palette.variants[defaultVariant].colors[token].hex;
       const variable = cssVariable(defaultVariant, token);
-      return <tr><td class="rsw"><span style={'background:' + hex}></span></td><td class="rn"><button type="button" data-v={variable} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variable}><span>{variable}</span><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td><td class="ru">{use}</td><td class="ru">{example}</td></tr>;
+      return <tr><td class="usage-swatch"><span style={'background:' + hex}></span></td><td class="usage-token"><button type="button" data-v={variable} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variable}><span>{variable}</span><svg class="copy-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td><td class="usage-text">{use}</td><td class="usage-text">{example}</td></tr>;
     })}</tbody>
     </table>
 
     <div class="spec-group">
       <div class="spec-head">
         <h3>More examples</h3>
-        <p>A few ideas for code, messages, diffs, and terminals.</p>
       </div>
       <div class="spec-grid">
         <article class="spec-card">
@@ -53,7 +52,6 @@ import { copyInk, cssVariable } from '../lib/colour';
             <div class="diff-line modified"><span aria-hidden="true">~</span><code>timeout: 30,</code></div>
             <div class="diff-line added"><span aria-hidden="true">+</span><code>retries: 2,</code></div>
           </div>
-          <p class="spec-note">The signs show what changed, with a little background colour to help each line stand out.</p>
         </article>
         <article class="spec-card terminal-card">
           <h4>Terminal ANSI</h4>
@@ -88,7 +86,7 @@ import { copyInk, cssVariable } from '../lib/colour';
 <section class="guide" id="using-firelight">
   <div class="section-panel">
     <h2>Accessibility</h2>
-    <p>All six <code>fg</code> shades reach at least 4.5:1 contrast against <code>bg1</code>. Contrast changes with the background and opacity. Some accents have lower contrast, especially in Ash.</p>
-    <p>The Playground lets you check text contrast with different backgrounds, colours, and opacity levels.</p>
+    <p>All six <code>fg</code> shades reach at least 4.5:1 contrast against <code>bg1</code>. However contrast will change with the background and opacity, so some combinations might end up with lower contrast, especially in Ash.</p>
+    <p>You can check and compare the contrast and play around with combinations  with different backgrounds, colours, and opacity levels in Playground.</p>
   </div>
 </section>

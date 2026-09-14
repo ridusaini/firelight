@@ -6,10 +6,10 @@ interface Props { variant: Variant }
 const { variant } = Astro.props;
 const data = palette.variants[variant];
 ---
-<section class="v" id={variant} data-fl={variant} aria-labelledby={variant + '-title'}>
+<section class="variant" id={variant} data-fl={variant} aria-labelledby={variant + '-title'}>
   <div class="variant-panel">
     <h3 id={variant + '-title'}>{variantNames[variant]}</h3>
-    <p class="vd">{data.description}</p>
+    <p class="section-lede">{data.description}</p>
     <div class="variant-tools"><span>22 colours</span><button type="button" data-copy-variant={variant}>Copy {variantNames[variant]} as CSS</button></div>
     <table>
       <thead><tr><th scope="col"><span class="sr-only">Colour</span></th><th scope="col">Name</th><th scope="col">Hex</th><th scope="col">RGB</th><th scope="col">HSL</th><th scope="col">OKLCH</th></tr></thead>
@@ -17,8 +17,8 @@ const data = palette.variants[variant];
         const { hex } = color;
         const values = colorFormats(color);
         return <tr>
-          <td class="ch"><span style={'background:' + hex}></span></td><td class="cn">{token}</td>
-          {values.map(([format, value]) => <td class="cv"><button type="button" data-v={value} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variantNames[variant] + ' ' + token + ' as ' + format}><span>{value}</span><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td>)}
+          <td class="swatch-cell"><span style={'background:' + hex}></span></td><td class="token-cell">{token}</td>
+          {values.map(([format, value]) => <td class="value-cell"><button type="button" data-v={value} data-c={hex} data-i={copyInk(hex)} aria-label={'Copy ' + variantNames[variant] + ' ' + token + ' as ' + format}><span>{value}</span><svg class="copy-icon" viewBox="0 0 16 16" aria-hidden="true"><use href="#cp" /></svg></button></td>)}
         </tr>;
       })}</tbody>
     </table>

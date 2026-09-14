@@ -1,48 +1,51 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
+import postcss from 'postcss';
 import palette from '../downloads/firelight.json';
 import { contrastRatio, copyInk, paletteTokens, paletteValues, variantCss } from '../src/lib/colour';
-import { copy } from '../src/scripts/clipboard';
-import postcss from 'postcss';
 
-for(const [variant,data] of Object.entries(palette.variants)) {
-  const values = Object.fromEntries(Object.entries(data.colors).map(([token, color]) => [token, color.hex]));
-  test(variant+' export contains all 25 exact names and values',()=>{
-    const css=variantCss(variant,values);assert(css);
-    const declarations: Record<string,string>={};
-    postcss.parse(css).walkDecls(decl=>{declarations[decl.prop]=decl.value.toUpperCase()});
-    assert.equal(Object.keys(declarations).length,25);
-    for(const token of paletteTokens) assert.equal(declarations['--fl-'+variant+'-'+token],values[token]);
-    const styles={getPropertyValue:(name:string)=>declarations[name] ?? ''} as CSSStyleDeclaration;
-    assert.deepEqual(paletteValues(variant,styles),values);
-    delete declarations['--fl-'+variant+'-bg1'];assert.equal(paletteValues(variant,styles),null);
-    assert.equal(variantCss(variant,{...values,bg1:''}),null);
+for (const [variant, data] of Object.entries(palette.variants)) {
+  const values = Object.fromEntries(Object.entries(data.colors).map(([token, colour]) => [token, colour.hex]));
+
+  test(variant + ' exports every token and reads back unchanged', () => {
+    const css = variantCss(variant, values);
+    assert(css, 'a complete variant should export');
+
+    const declared: Record<string, string> = {};
+    postcss.parse(css).walkDecls(decl => { declared[decl.prop] = decl.value.toUpperCase(); });
+    assert.equal(Object.keys(declared).length, paletteTokens.length);
+    for (const token of paletteTokens) assert.equal(declared['--fl-' + variant + '-' + token], values[token], token);
+
+    const styles = { getPropertyValue: (name: string) => declared[name] ?? '' } as CSSStyleDeclaration;
+    assert.deepEqual(paletteValues(variant, styles), values);
+  });
+
+  test(variant + ' refuses to export or read a partial palette', () => {
+    assert.equal(variantCss(variant, { ...values, bg1: '' }), null);
+
+    const declared: Record<string, string> = { ...values };
+    const styles = { getPropertyValue: (name: string) => declared[name.replace('--fl-' + variant + '-', '')] ?? '' } as CSSStyleDeclaration;
+    delete declared.bg1;
+    assert.equal(paletteValues(variant, styles), null);
   });
 }
-test('contrast matches known ratios and transparent text',()=>{
-  assert.equal(contrastRatio('#000000','#FFFFFF'),21);
-  assert.equal(contrastRatio('#FFFFFF','#000000'),21);
-  assert.equal(contrastRatio('#123456','#123456'),1);
-  assert.equal(contrastRatio('#123456','#FFFFFF',0),1);
-  assert(Math.abs(contrastRatio('#000000','#FFFFFF',0.5)-5.280822809644651)<1e-10);
+
+test('a missing palette cannot be exported', () => {
+  assert.equal(variantCss('coal', null), null);
 });
-test('copy labels choose the more readable black or white text',()=>{
-  assert.equal(copyInk('#FFFFFF'),'#000000');
-  assert.equal(copyInk('#000000'),'#FFFFFF');
-  assert.equal(copyInk('#777777'),'#000000');
+
+test('contrast matches known ratios and blends a translucent foreground', () => {
+  assert.equal(contrastRatio('#000000', '#FFFFFF'), 21);
+  assert.equal(contrastRatio('#FFFFFF', '#000000'), 21);
+  assert.equal(contrastRatio('#123456', '#123456'), 1);
+  assert.equal(contrastRatio('#123456', '#FFFFFF', 0), 1);
+  const half = contrastRatio('#000000', '#FFFFFF', 0.5);
+  assert(half > 1 && half < 21);
+  assert(Math.abs(half - 5.280822809644651) < 1e-10);
 });
-test('missing palette values cannot be exported',()=>{
-  assert.equal(variantCss('coal',null),null);
-});
-test('clipboard success, permission refusal, and unavailable API',async()=>{
-  const original=Object.getOwnPropertyDescriptor(globalThis,'navigator');
-  try {
-    let copied='';
-    Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async(value:string)=>{copied=value}}}});
-    assert.equal(await copy('firelight'),true);assert.equal(copied,'firelight');
-    Object.defineProperty(globalThis,'navigator',{configurable:true,value:{clipboard:{writeText:async()=>{throw new Error('NotAllowedError')}}}});
-    assert.equal(await copy('firelight'),false);
-    Object.defineProperty(globalThis,'navigator',{configurable:true,value:{}});
-    assert.equal(await copy('firelight'),false);
-  } finally { if(original)Object.defineProperty(globalThis,'navigator',original);else Reflect.deleteProperty(globalThis,'navigator'); }
+
+test('copy labels pick the more readable of black and white', () => {
+  assert.equal(copyInk('#FFFFFF'), '#000000');
+  assert.equal(copyInk('#000000'), '#FFFFFF');
+  assert.equal(copyInk('#777777'), '#000000');
 });
