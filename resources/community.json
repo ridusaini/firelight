@@ -1,4 +1,25 @@
 {
   "schemaVersion": 1,
-  "entries": []
+  "entries": [
+    {
+      "id": "firelight-obsidian",
+      "name": "firelight for Obsidian",
+      "kind": "theme",
+      "description": "firelight theme for Obsidian Notes, in all three variants.",
+      "url": "https://github.com/ridusaini/obsidian-firelight",
+      "authors": [
+        {
+          "name": "ridusaini",
+          "url": "https://github.com/ridusaini"
+        }
+      ],
+      "app": "Obsidian",
+      "variants": [
+        "coal",
+        "smoulder",
+        "ash"
+      ],
+      "category": "tools"
+    }
+  ]
 }
