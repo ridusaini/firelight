@@ -20,6 +20,33 @@
         "ash"
       ],
       "category": "tools"
+    },
+    {
+      "id": "firelight-claude-code",
+      "name": "firelight for Claude Code",
+      "kind": "theme",
+      "description": "Claude Code themes in all three variants, with matching Windows Terminal colour schemes.",
+      "url": "https://github.com/GarvitNangru/claude-code-mods/tree/main/skins/firelight",
+      "authors": [
+        {
+          "name": "Garvit Nangru",
+          "url": "https://github.com/GarvitNangru"
+        }
+      ],
+      "app": "Claude Code",
+      "variants": [
+        "coal",
+        "smoulder",
+        "ash"
+      ],
+      "category": "tools",
+      "notes": "Diff and selection backgrounds are mixed from palette colours, and Claude's accent uses coral. The README lists each change.",
+      "links": [
+        {
+          "label": "Install",
+          "url": "https://github.com/GarvitNangru/claude-code-mods/tree/main/skins/firelight#installing"
+        }
+      ]
     }
   ]
 }
